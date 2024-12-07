@@ -1,31 +1,32 @@
 aid: octoparse
-name: Octoparse
-description: >-
-  Octoparse is your no-coding solution for web scraping to turn pages into
-  structured data within clicks.
-type: Index
-position: Consumer
-access: 3rd-Party
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-tags:
-  - API
-created: '2024-11-27'
-modified: '2024-11-27'
 url: >-
   https://raw.githubusercontent.com/api-evangelist/octoparse/refs/heads/main/apis.yml
-specificationVersion: '0.19'
 apis:
   - aid: octoparse:octoparse
     name: Octoparse
+    tags:
+      - API
+    humanURL: https://www.octoparse.com/
+    properties:
+      - url: https://www.octoparse.com/
+        type: Documentation
     description: >-
       Octoparse is your no-coding solution for web scraping to turn pages into
       structured data within clicks.
-    humanURL: https://www.octoparse.com/
-    tags:
-      - API
-    properties:
-      - type: Documentation
-        url: https://www.octoparse.com/
+name: Octoparse
+tags:
+  - Scraping
+  - Harvesting
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+created: '2024-11-27'
+modified: '2024-12-07'
+position: Consumer
+description: >-
+  Octoparse is your no-coding solution for web scraping to turn pages into
+  structured data within clicks.
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
+specificationVersion: '0.19'
