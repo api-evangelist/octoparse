@@ -12,7 +12,7 @@ paths:
   token:
     post:
       tags:
-        - Access_Token
+        - Token
       summary: getToken
       description: Obtain a New Token
       requestBody:
@@ -98,7 +98,8 @@ paths:
   cloudextraction/task/subtasks:
     get:
       tags:
-        - Cloud_Extraction
+        - Task
+        - Cloud_ Extraction
       summary: SubtasksStatus
       description: Get Subtask Status
       requestBody:
@@ -179,7 +180,7 @@ paths:
   cloudextraction/statuses:
     post:
       tags:
-        - Cloud_Extraction
+        - Statuses
       summary: TaskStatus
       description: Get Task Status
       requestBody:
@@ -263,7 +264,7 @@ paths:
   cloudextraction/statuses/v2:
     post:
       tags:
-        - Cloud_Extraction
+        - Statuses
       summary: TaskStatusV2
       description: Get Task Status V2
       requestBody:
@@ -355,7 +356,7 @@ paths:
   cloudextraction/start:
     post:
       tags:
-        - Cloud_Extraction
+        - Cloud_ Extraction
       summary: cloudextractionStart
       description: Start Task
       requestBody:
@@ -419,7 +420,7 @@ paths:
   cloudextraction/stop:
     post:
       tags:
-        - Cloud_Extraction
+        - Stop
       summary: cloudextractionStop
       description: Stop Task
       requestBody:
@@ -483,7 +484,7 @@ paths:
   cloudextraction/subtasks{start}:
     post:
       tags:
-        - Cloud_Extraction
+        - Subtasks
       summary: cloudextractionSubtasksStart
       description: Start subtasks
       requestBody:
@@ -552,7 +553,8 @@ paths:
   cloudextraction/subtasks{stop}:
     post:
       tags:
-        - Cloud_Extraction
+        - Subtasks
+        - Stop
       summary: cloudextractionSubtasksStop
       description: Stop Subtasks
       requestBody:
@@ -996,6 +998,7 @@ paths:
     post:
       tags:
         - Data
+        - Remove
       summary: remove
       description: Remove Data
       requestBody:
@@ -1060,6 +1063,7 @@ paths:
     post:
       tags:
         - Task
+        - Copy
       summary: Copy
       description: Duplicate Task
       requestBody:
@@ -1135,6 +1139,8 @@ paths:
     post:
       tags:
         - Task
+        - Move
+        - Group
       summary: MoveToGroup
       description: Move Task
       requestBody:
@@ -1205,6 +1211,7 @@ paths:
     get:
       tags:
         - Task
+        - Search
       summary: Search
       description: Search Task
       requestBody:
@@ -1279,6 +1286,7 @@ paths:
     post:
       tags:
         - Task
+        - Files
       summary: UpdateUrls
       description: Update Task URLs
       requestBody:
@@ -1347,7 +1355,8 @@ paths:
   taskGroup:
     get:
       tags:
-        - Task_Group
+        - Task
+        - Groups
       summary: taskGroup
       description: Get Task Group Information
       requestBody:
@@ -1416,6 +1425,7 @@ paths:
     post:
       tags:
         - Task
+        - Actions
       summary: getActions
       description: Get Action Parameters
       requestBody:
@@ -1528,6 +1538,8 @@ paths:
     post:
       tags:
         - Task
+        - Action
+        - Properties
       summary: updateActionProperties
       description: Update Action Parameters
       requestBody:
@@ -1634,6 +1646,8 @@ paths:
     post:
       tags:
         - Task
+        - Loop
+        - Items
       summary: updateLoopItems
       description: Update Loop Item List
       requestBody:
