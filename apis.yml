@@ -1,5 +1,6 @@
 aid: octoparse
 url: >-
+
   https://raw.githubusercontent.com/api-evangelist/octoparse/refs/heads/main/apis.yml
 apis:
   - aid: octoparse:octoparse
@@ -10,7 +11,9 @@ apis:
     properties:
       - url: https://www.octoparse.com/
         type: Documentation
-    description: >-
+      - type: OpenAPI
+        url: properties/octoparse-openapi.yml
+    description: |-
       Octoparse is your no-coding solution for web scraping to turn pages into
       structured data within clicks.
 name: Octoparse
@@ -23,7 +26,8 @@ access: 3rd-Party
 created: '2024-11-27'
 modified: '2024-12-07'
 position: Consumer
-description: >-
+description: |-
+
   Octoparse is your no-coding solution for web scraping to turn pages into
   structured data within clicks.
 maintainers:
