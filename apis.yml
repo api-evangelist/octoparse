@@ -34,6 +34,7 @@ apis:
     description: |-
       Octoparse is your no-coding solution for web scraping to turn pages into
       structured data within clicks.
+    baseURL: https://openapi.octoparse.com
 name: Octoparse
 tags:
   - Scraping
