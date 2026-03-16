@@ -43,7 +43,7 @@ type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2024-11-27'
-modified: '2025-01-02'
+modified: '2026-03-16'
 position: Consuming
 description: >-
   Octoparse is a powerful web scraping tool that allows users to extract data
@@ -58,7 +58,7 @@ description: >-
   decisions based on data-driven analysis.
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
+    email: kin@apievangelist.com
 specificationVersion: '0.19'
 common:
   - name: Web Scraping Tool & Free Web Crawlers | Octoparse
