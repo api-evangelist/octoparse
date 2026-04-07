@@ -13,7 +13,7 @@ paths:
     post:
       tags:
         - Token
-      summary: getToken
+      summary: Octoparse getToken
       description: Obtain a New Token
       requestBody:
         content:
@@ -100,7 +100,7 @@ paths:
       tags:
         - Task
         - Cloud_ Extraction
-      summary: SubtasksStatus
+      summary: Octoparse SubtasksStatus
       description: Get Subtask Status
       requestBody:
         content:
@@ -181,7 +181,7 @@ paths:
     post:
       tags:
         - Statuses
-      summary: TaskStatus
+      summary: Octoparse TaskStatus
       description: Get Task Status
       requestBody:
         content:
@@ -265,7 +265,7 @@ paths:
     post:
       tags:
         - Statuses
-      summary: TaskStatusV2
+      summary: Octoparse TaskStatusV2
       description: Get Task Status V2
       requestBody:
         content:
@@ -357,7 +357,7 @@ paths:
     post:
       tags:
         - Cloud_ Extraction
-      summary: cloudextractionStart
+      summary: Octoparse cloudextractionStart
       description: Start Task
       requestBody:
         content:
@@ -390,7 +390,7 @@ paths:
               examples:
                 Response Example:
                   value:
-                    data: null
+                    data:
                     requestId: 0HMD469L0I8Q1:00000001
         '400':
           description: Error Example
@@ -421,7 +421,7 @@ paths:
     post:
       tags:
         - Stop
-      summary: cloudextractionStop
+      summary: Octoparse cloudextractionStop
       description: Stop Task
       requestBody:
         content:
@@ -454,7 +454,7 @@ paths:
               examples:
                 Response Example:
                   value:
-                    data: null
+                    data:
                     requestId: 0HMD469L0I8Q1:00000001
         '400':
           description: Error Example
@@ -485,7 +485,7 @@ paths:
     post:
       tags:
         - Subtasks
-      summary: cloudextractionSubtasksStart
+      summary: Octoparse cloudextractionSubtasksStart
       description: Start subtasks
       requestBody:
         content:
@@ -523,7 +523,7 @@ paths:
               examples:
                 Response Example:
                   value:
-                    data: null
+                    data:
                     requestId: 0HMD469L0I8Q1:00000001
         '400':
           description: Error Example
@@ -555,7 +555,7 @@ paths:
       tags:
         - Subtasks
         - Stop
-      summary: cloudextractionSubtasksStop
+      summary: Octoparse cloudextractionSubtasksStop
       description: Stop Subtasks
       requestBody:
         content:
@@ -593,7 +593,7 @@ paths:
               examples:
                 Response Example:
                   value:
-                    data: null
+                    data:
                     requestId: 0HMD469L0I8Q1:00000001
         '400':
           description: Error Example
@@ -624,7 +624,7 @@ paths:
     get:
       tags:
         - Data
-      summary: all
+      summary: Octoparse all
       description: Get Data by Offset
       requestBody:
         content:
@@ -729,7 +729,7 @@ paths:
     get:
       tags:
         - Data
-      summary: lotnoAll
+      summary: Octoparse lotnoAll
       description: Get Data From a Designated Batch by Offset
       requestBody:
         content:
@@ -840,7 +840,7 @@ paths:
     post:
       tags:
         - Data
-      summary: markexported
+      summary: Octoparse markexported
       description: Mark Data as Exported
       requestBody:
         content:
@@ -873,7 +873,7 @@ paths:
               examples:
                 Response Example:
                   value:
-                    data: null
+                    data:
                     requestId: 0HMD469L0I8Q1:00000001
         '400':
           description: Error Example
@@ -904,7 +904,7 @@ paths:
     get:
       tags:
         - Data
-      summary: notexported
+      summary: Octoparse notexported
       description: Get Non-Exported Data
       requestBody:
         content:
@@ -999,7 +999,7 @@ paths:
       tags:
         - Data
         - Remove
-      summary: remove
+      summary: Octoparse remove
       description: Remove Data
       requestBody:
         content:
@@ -1032,7 +1032,7 @@ paths:
               examples:
                 Response Example:
                   value:
-                    data: null
+                    data:
                     requestId: 0HMD469L0I8Q1:00000001
         '400':
           description: Error Example
@@ -1064,7 +1064,7 @@ paths:
       tags:
         - Task
         - Copy
-      summary: Copy
+      summary: Octoparse Copy
       description: Duplicate Task
       requestBody:
         content:
@@ -1141,7 +1141,7 @@ paths:
         - Task
         - Move
         - Group
-      summary: MoveToGroup
+      summary: Octoparse MoveToGroup
       description: Move Task
       requestBody:
         content:
@@ -1212,7 +1212,7 @@ paths:
       tags:
         - Task
         - Search
-      summary: Search
+      summary: Octoparse Search
       description: Search Task
       requestBody:
         content:
@@ -1287,7 +1287,7 @@ paths:
       tags:
         - Task
         - Files
-      summary: UpdateUrls
+      summary: Octoparse UpdateUrls
       description: Update Task URLs
       requestBody:
         content:
@@ -1325,7 +1325,7 @@ paths:
               examples:
                 Response Example:
                   value:
-                    data: null
+                    data:
                     requestId: 0HMCVDHG1V3E6:00000002
         '400':
           description: Error Example
@@ -1357,7 +1357,7 @@ paths:
       tags:
         - Task
         - Groups
-      summary: taskGroup
+      summary: Octoparse taskGroup
       description: Get Task Group Information
       requestBody:
         content:
@@ -1426,7 +1426,7 @@ paths:
       tags:
         - Task
         - Actions
-      summary: getActions
+      summary: Octoparse getActions
       description: Get Action Parameters
       requestBody:
         content:
@@ -1540,7 +1540,7 @@ paths:
         - Task
         - Action
         - Properties
-      summary: updateActionProperties
+      summary: Octoparse updateActionProperties
       description: Update Action Parameters
       requestBody:
         content:
@@ -1648,7 +1648,7 @@ paths:
         - Task
         - Loop
         - Items
-      summary: updateLoopItems
+      summary: Octoparse updateLoopItems
       description: Update Loop Item List
       requestBody:
         content:

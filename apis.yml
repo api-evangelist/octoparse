@@ -1,5 +1,5 @@
 aid: octoparse
-url: >-
+url: >2-
 
   https://raw.githubusercontent.com/api-evangelist/octoparse/refs/heads/main/apis.yml
 apis:
@@ -32,9 +32,9 @@ apis:
         type: Documentation
       - url: properties/octoparse-openapi.yml
         type: OpenAPI
-    description: |-
-      Octoparse is your no-coding solution for web scraping to turn pages into
-      structured data within clicks.
+    description: >-
+      Octoparse is your no-coding solution for web scraping to turn pages into structured
+      data within clicks.
 name: Octoparse
 tags:
   - Scraping
@@ -46,16 +46,12 @@ created: '2024-11-27'
 modified: '2026-03-16'
 position: Consuming
 description: >-
-  Octoparse is a powerful web scraping tool that allows users to extract data
-  from websites without any coding knowledge. The platform uses advanced
-  algorithms to automatically identify and extract relevant information from web
-  pages, saving users time and effort. With Octoparse, users can easily collect
-  and organize data from multiple sources, such as e-commerce sites, social
-  media platforms, and news websites, for analysis and reporting. The tool
-  offers a user-friendly interface and a variety of features, such as scheduling
-  and cloud extraction, to streamline the data extraction process. Overall,
-  Octoparse empowers users to gather valuable insights and make informed
-  decisions based on data-driven analysis.
+  Octoparse is a powerful web scraping tool that allows users to extract data from
+  websites without any coding knowledge. The platform uses advanced algorithms to
+  automatically identify and extract relevant information from web pages, saving users
+  time and effort. With Octoparse, users can easily collect and organize data from
+  multiple sources, such as e-commerce sites, social media platforms, and news websites,
+  for analysis and reporting.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
