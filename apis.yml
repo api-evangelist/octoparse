@@ -6,25 +6,25 @@ apis:
   - aid: octoparse:octoparse
     name: Octoparse
     tags:
-      - Token
-      - Task
+      - Action
+      - Actions
       - Cloud_ Extraction
+      - Copy
+      - Data
+      - Files
+      - Group
+      - Groups
+      - Items
+      - Loop
+      - Move
+      - Properties
+      - Remove
+      - Search
       - Statuses
       - Stop
       - Subtasks
-      - Data
-      - Remove
-      - Copy
-      - Move
-      - Group
-      - Search
-      - Files
-      - Groups
-      - Actions
-      - Action
-      - Properties
-      - Loop
-      - Items
+      - Task
+      - Token
     baseURL: https://openapi.octoparse.com
     humanURL: https://www.octoparse.com/
     properties:
@@ -37,8 +37,8 @@ apis:
       data within clicks.
 name: Octoparse
 tags:
-  - Scraping
   - Harvesting
+  - Scraping
 type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party

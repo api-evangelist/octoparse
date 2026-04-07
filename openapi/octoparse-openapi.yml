@@ -98,8 +98,8 @@ paths:
   cloudextraction/task/subtasks:
     get:
       tags:
-        - Task
         - Cloud_ Extraction
+        - Task
       summary: Octoparse SubtasksStatus
       description: Get Subtask Status
       requestBody:
@@ -553,8 +553,8 @@ paths:
   cloudextraction/subtasks{stop}:
     post:
       tags:
-        - Subtasks
         - Stop
+        - Subtasks
       summary: Octoparse cloudextractionSubtasksStop
       description: Stop Subtasks
       requestBody:
@@ -1062,8 +1062,8 @@ paths:
   task/copy:
     post:
       tags:
-        - Task
         - Copy
+        - Task
       summary: Octoparse Copy
       description: Duplicate Task
       requestBody:
@@ -1138,9 +1138,9 @@ paths:
   task/moveToGroup:
     post:
       tags:
-        - Task
-        - Move
         - Group
+        - Move
+        - Task
       summary: Octoparse MoveToGroup
       description: Move Task
       requestBody:
@@ -1210,8 +1210,8 @@ paths:
   task/search:
     get:
       tags:
-        - Task
         - Search
+        - Task
       summary: Octoparse Search
       description: Search Task
       requestBody:
@@ -1285,8 +1285,8 @@ paths:
   task/urls{file}:
     post:
       tags:
-        - Task
         - Files
+        - Task
       summary: Octoparse UpdateUrls
       description: Update Task URLs
       requestBody:
@@ -1355,8 +1355,8 @@ paths:
   taskGroup:
     get:
       tags:
-        - Task
         - Groups
+        - Task
       summary: Octoparse taskGroup
       description: Get Task Group Information
       requestBody:
@@ -1424,8 +1424,8 @@ paths:
   task/getActions:
     post:
       tags:
-        - Task
         - Actions
+        - Task
       summary: Octoparse getActions
       description: Get Action Parameters
       requestBody:
@@ -1537,9 +1537,9 @@ paths:
   task/updateActionProperties:
     post:
       tags:
-        - Task
         - Action
         - Properties
+        - Task
       summary: Octoparse updateActionProperties
       description: Update Action Parameters
       requestBody:
@@ -1645,9 +1645,9 @@ paths:
   task/updateLoopItems:
     post:
       tags:
-        - Task
-        - Loop
         - Items
+        - Loop
+        - Task
       summary: Octoparse updateLoopItems
       description: Update Loop Item List
       requestBody:
@@ -1735,3 +1735,23 @@ paths:
                       code: TaskUpdateFail
                       message: Update fails.
                     requestId: 0HMCVDHG1V3E6:00000002
+tags:
+  - name: Action
+  - name: Actions
+  - name: Cloud_ Extraction
+  - name: Copy
+  - name: Data
+  - name: Files
+  - name: Group
+  - name: Groups
+  - name: Items
+  - name: Loop
+  - name: Move
+  - name: Properties
+  - name: Remove
+  - name: Search
+  - name: Statuses
+  - name: Stop
+  - name: Subtasks
+  - name: Task
+  - name: Token
