@@ -30,7 +30,7 @@ apis:
     properties:
       - url: https://www.octoparse.com/
         type: Documentation
-      - url: properties/octoparse-openapi.yml
+      - url: openapi/octoparse-openapi.yml
         type: OpenAPI
     description: >-
       Octoparse is your no-coding solution for web scraping to turn pages into structured
@@ -43,7 +43,7 @@ type: Contract
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2024-11-27'
-modified: '2026-03-16'
+modified: '2026-04-28'
 position: Consuming
 description: >-
   Octoparse is a powerful web scraping tool that allows users to extract data from
