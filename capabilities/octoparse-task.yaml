@@ -1,0 +1,476 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Octoparse — Task
+  description: 'Octoparse — Task. 9 operations. Lead operation: Octoparse SubtasksStatus. Self-contained Naftiko capability
+    covering one Octoparse business surface.'
+  tags:
+  - Octoparse
+  - Task
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    OCTOPARSE_API_KEY: OCTOPARSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: octoparse-task
+    baseUri: https://openapi.octoparse.com
+    description: Octoparse — Task business capability. Self-contained, no shared references.
+    resources:
+    - name: cloudextraction-task-subtasks
+      path: cloudextraction/task/subtasks
+      operations:
+      - name: get
+        method: GET
+        description: Octoparse SubtasksStatus
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskId
+          in: query
+          type: string
+          description: Task ID
+          required: true
+        - name: page
+          in: query
+          type: string
+          description: Page number
+          required: true
+        - name: size
+          in: query
+          type: string
+          description: Number of subtasks a page (1 to 20)
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: task-copy
+      path: task/copy
+      operations:
+      - name: post
+        method: POST
+        description: Octoparse Copy
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskGroupId
+          in: query
+          type: string
+          description: Task group ID (If not specified, the task will be duplicated to the current task group)
+          required: true
+        - name: taskId
+          in: query
+          type: string
+          description: Task ID
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: task-getActions
+      path: task/getActions
+      operations:
+      - name: post
+        method: POST
+        description: Octoparse getActions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: task-moveToGroup
+      path: task/moveToGroup
+      operations:
+      - name: post
+        method: POST
+        description: Octoparse MoveToGroup
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskGroupId
+          in: query
+          type: string
+          description: Task group ID
+          required: true
+        - name: taskId
+          in: query
+          type: string
+          description: Task ID
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: task-search
+      path: task/search
+      operations:
+      - name: get
+        method: GET
+        description: Octoparse Search
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskGroupId
+          in: query
+          type: string
+          description: Task group ID
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: task-updateActionProperties
+      path: task/updateActionProperties
+      operations:
+      - name: post
+        method: POST
+        description: Octoparse updateActionProperties
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: task-updateLoopItems
+      path: task/updateLoopItems
+      operations:
+      - name: post
+        method: POST
+        description: Octoparse updateLoopItems
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: task-urls{file}
+      path: task/urls{file}
+      operations:
+      - name: post
+        method: POST
+        description: Octoparse UpdateUrls
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskId
+          in: query
+          type: string
+          description: Task ID
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: taskGroup
+      path: taskGroup
+      operations:
+      - name: get
+        method: GET
+        description: Octoparse taskGroup
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+  exposes:
+  - type: rest
+    namespace: octoparse-task-rest
+    port: 8080
+    description: REST adapter for Octoparse — Task. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/cloudextraction/task/subtasks
+      name: cloudextraction-task-subtasks
+      description: REST surface for cloudextraction-task-subtasks.
+      operations:
+      - method: GET
+        name: get
+        description: Octoparse SubtasksStatus
+        call: octoparse-task.get
+        with:
+          taskId: rest.taskId
+          page: rest.page
+          size: rest.size
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/task/copy
+      name: task-copy
+      description: REST surface for task-copy.
+      operations:
+      - method: POST
+        name: post
+        description: Octoparse Copy
+        call: octoparse-task.post
+        with:
+          taskGroupId: rest.taskGroupId
+          taskId: rest.taskId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/task/getactions
+      name: task-getactions
+      description: REST surface for task-getActions.
+      operations:
+      - method: POST
+        name: post
+        description: Octoparse getActions
+        call: octoparse-task.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/task/movetogroup
+      name: task-movetogroup
+      description: REST surface for task-moveToGroup.
+      operations:
+      - method: POST
+        name: post
+        description: Octoparse MoveToGroup
+        call: octoparse-task.post
+        with:
+          taskGroupId: rest.taskGroupId
+          taskId: rest.taskId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/task/search
+      name: task-search
+      description: REST surface for task-search.
+      operations:
+      - method: GET
+        name: get
+        description: Octoparse Search
+        call: octoparse-task.get
+        with:
+          taskGroupId: rest.taskGroupId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/task/updateactionproperties
+      name: task-updateactionproperties
+      description: REST surface for task-updateActionProperties.
+      operations:
+      - method: POST
+        name: post
+        description: Octoparse updateActionProperties
+        call: octoparse-task.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/task/updateloopitems
+      name: task-updateloopitems
+      description: REST surface for task-updateLoopItems.
+      operations:
+      - method: POST
+        name: post
+        description: Octoparse updateLoopItems
+        call: octoparse-task.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/task/urls-file
+      name: task-urls-file
+      description: REST surface for task-urls{file}.
+      operations:
+      - method: POST
+        name: post
+        description: Octoparse UpdateUrls
+        call: octoparse-task.post
+        with:
+          taskId: rest.taskId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/taskgroup
+      name: taskgroup
+      description: REST surface for taskGroup.
+      operations:
+      - method: GET
+        name: get
+        description: Octoparse taskGroup
+        call: octoparse-task.get
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: octoparse-task-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Octoparse — Task. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: octoparse-subtasksstatus
+      description: Octoparse SubtasksStatus
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: octoparse-task.get
+      with:
+        taskId: tools.taskId
+        page: tools.page
+        size: tools.size
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: octoparse-copy
+      description: Octoparse Copy
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octoparse-task.post
+      with:
+        taskGroupId: tools.taskGroupId
+        taskId: tools.taskId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: octoparse-getactions
+      description: Octoparse getActions
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octoparse-task.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: octoparse-movetogroup
+      description: Octoparse MoveToGroup
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octoparse-task.post
+      with:
+        taskGroupId: tools.taskGroupId
+        taskId: tools.taskId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: octoparse-search
+      description: Octoparse Search
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: octoparse-task.get
+      with:
+        taskGroupId: tools.taskGroupId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: octoparse-updateactionproperties
+      description: Octoparse updateActionProperties
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octoparse-task.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: octoparse-updateloopitems
+      description: Octoparse updateLoopItems
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octoparse-task.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: octoparse-updateurls
+      description: Octoparse UpdateUrls
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octoparse-task.post
+      with:
+        taskId: tools.taskId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: octoparse-taskgroup
+      description: Octoparse taskGroup
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: octoparse-task.get
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

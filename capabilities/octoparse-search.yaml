@@ -1,0 +1,84 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Octoparse — Search
+  description: 'Octoparse — Search. 1 operations. Lead operation: Octoparse Search. Self-contained Naftiko capability covering
+    one Octoparse business surface.'
+  tags:
+  - Octoparse
+  - Search
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    OCTOPARSE_API_KEY: OCTOPARSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: octoparse-search
+    baseUri: https://openapi.octoparse.com
+    description: Octoparse — Search business capability. Self-contained, no shared references.
+    resources:
+    - name: task-search
+      path: task/search
+      operations:
+      - name: get
+        method: GET
+        description: Octoparse Search
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskGroupId
+          in: query
+          type: string
+          description: Task group ID
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+  exposes:
+  - type: rest
+    namespace: octoparse-search-rest
+    port: 8080
+    description: REST adapter for Octoparse — Search. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/task/search
+      name: task-search
+      description: REST surface for task-search.
+      operations:
+      - method: GET
+        name: get
+        description: Octoparse Search
+        call: octoparse-search.get
+        with:
+          taskGroupId: rest.taskGroupId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: octoparse-search-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Octoparse — Search. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: octoparse-search
+      description: Octoparse Search
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: octoparse-search.get
+      with:
+        taskGroupId: tools.taskGroupId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

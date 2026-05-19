@@ -1,0 +1,77 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Octoparse — Groups
+  description: 'Octoparse — Groups. 1 operations. Lead operation: Octoparse taskGroup. Self-contained Naftiko capability covering
+    one Octoparse business surface.'
+  tags:
+  - Octoparse
+  - Groups
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    OCTOPARSE_API_KEY: OCTOPARSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: octoparse-groups
+    baseUri: https://openapi.octoparse.com
+    description: Octoparse — Groups business capability. Self-contained, no shared references.
+    resources:
+    - name: taskGroup
+      path: taskGroup
+      operations:
+      - name: get
+        method: GET
+        description: Octoparse taskGroup
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+  exposes:
+  - type: rest
+    namespace: octoparse-groups-rest
+    port: 8080
+    description: REST adapter for Octoparse — Groups. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/taskgroup
+      name: taskgroup
+      description: REST surface for taskGroup.
+      operations:
+      - method: GET
+        name: get
+        description: Octoparse taskGroup
+        call: octoparse-groups.get
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: octoparse-groups-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Octoparse — Groups. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: octoparse-taskgroup
+      description: Octoparse taskGroup
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: octoparse-groups.get
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

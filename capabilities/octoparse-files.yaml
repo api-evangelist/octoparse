@@ -1,0 +1,84 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Octoparse — Files
+  description: 'Octoparse — Files. 1 operations. Lead operation: Octoparse UpdateUrls. Self-contained Naftiko capability covering
+    one Octoparse business surface.'
+  tags:
+  - Octoparse
+  - Files
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    OCTOPARSE_API_KEY: OCTOPARSE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: octoparse-files
+    baseUri: https://openapi.octoparse.com
+    description: Octoparse — Files business capability. Self-contained, no shared references.
+    resources:
+    - name: task-urls{file}
+      path: task/urls{file}
+      operations:
+      - name: post
+        method: POST
+        description: Octoparse UpdateUrls
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: taskId
+          in: query
+          type: string
+          description: Task ID
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+  exposes:
+  - type: rest
+    namespace: octoparse-files-rest
+    port: 8080
+    description: REST adapter for Octoparse — Files. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/task/urls-file
+      name: task-urls-file
+      description: REST surface for task-urls{file}.
+      operations:
+      - method: POST
+        name: post
+        description: Octoparse UpdateUrls
+        call: octoparse-files.post
+        with:
+          taskId: rest.taskId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: octoparse-files-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Octoparse — Files. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: octoparse-updateurls
+      description: Octoparse UpdateUrls
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: octoparse-files.post
+      with:
+        taskId: tools.taskId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
