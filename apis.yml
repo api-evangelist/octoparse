@@ -1,75 +1,37 @@
 aid: octoparse
-url: '
+url: |-
 
-  https://raw.githubusercontent.com/api-evangelist/octoparse/refs/heads/main/apis.yml'
+  https://raw.githubusercontent.com/api-evangelist/octoparse/refs/heads/main/apis.yml
 apis:
   - aid: octoparse:octoparse
     name: Octoparse
     tags:
-    - Action
-    - Actions
-    - Cloud_ Extraction
-    - Copy
-    - Data
-    - Files
-    - Group
-    - Groups
-    - Items
-    - Loop
-    - Move
-    - Properties
-    - Remove
-    - Search
-    - Statuses
-    - Stop
-    - Subtasks
-    - Task
-    - Token
+      - Action
+      - Actions
+      - Cloud_ Extraction
+      - Copy
+      - Data
+      - Files
+      - Group
+      - Groups
+      - Items
+      - Loop
+      - Move
+      - Properties
+      - Remove
+      - Search
+      - Statuses
+      - Stop
+      - Subtasks
+      - Task
+      - Token
     baseURL: https://openapi.octoparse.com
     humanURL: https://www.octoparse.com/
     properties:
-    - url: https://www.octoparse.com/
-      type: Documentation
-    - url: openapi/octoparse-openapi.yml
-      type: OpenAPI
-    - type: NaftikoCapability
-      url: capabilities/octoparse-action.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-actions.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-cloud-extraction.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-copy.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-data.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-files.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-group.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-groups.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-items.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-loop.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-move.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-properties.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-remove.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-search.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-statuses.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-stop.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-subtasks.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-task.yaml
-    - type: NaftikoCapability
-      url: capabilities/octoparse-token.yaml
+      - url: https://www.octoparse.com/
+        type: Documentation
+      - url: openapi/octoparse-openapi.yml
+        type: OpenAPI
     description: Octoparse is your no-coding solution for web scraping to turn pages into structured data within clicks.
 name: Octoparse
 tags:
@@ -81,10 +43,11 @@ access: 3rd-Party
 created: '2024-11-27'
 modified: '2026-05-19'
 position: Consuming
-description: Octoparse is a powerful web scraping tool that allows users to extract data from websites without any coding
-  knowledge. The platform uses advanced algorithms to automatically identify and extract relevant information from web pages,
-  saving users time and effort. With Octoparse, users can easily collect and organize data from multiple sources, such as
-  e-commerce sites, social media platforms, and news websites, for analysis and reporting.
+description: >-
+  Octoparse is a powerful web scraping tool that allows users to extract data from websites without any coding
+  knowledge. The platform uses advanced algorithms to automatically identify and extract relevant information from web
+  pages, saving users time and effort. With Octoparse, users can easily collect and organize data from multiple sources,
+  such as e-commerce sites, social media platforms, and news websites, for analysis and reporting.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
@@ -120,7 +83,8 @@ common:
     type: Code
   - name: Web Scraping Tool & Free Web Crawlers | Octoparse
     description: 'null'
-    url: https://identity.octoparse.com/Interlogin?lang=en-US&returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DOctoparse%26scope%3Dopenid%2520profile%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fwww.octoparse.com%252Flogin-callback%26nonce%3DKaF5JwpvyIJo6ZXghIrdVhJpATdf0zAYzTssKQReSvM%26state%3DmgG6bioTBesHvAP1awOmfKZlg-nMhU_1e4ZCKziFR58%26nextUrl%3Dhttps%253A%252F%252Fwww.octoparse.com%252F%26language%3Den-US
+    url: >-
+      https://identity.octoparse.com/Interlogin?lang=en-US&returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DOctoparse%26scope%3Dopenid%2520profile%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fwww.octoparse.com%252Flogin-callback%26nonce%3DKaF5JwpvyIJo6ZXghIrdVhJpATdf0zAYzTssKQReSvM%26state%3DmgG6bioTBesHvAP1awOmfKZlg-nMhU_1e4ZCKziFR58%26nextUrl%3Dhttps%253A%252F%252Fwww.octoparse.com%252F%26language%3Den-US
     type: Login
   - name: Web Scraping Tool & Free Web Crawlers | Octoparse
     description: 'null'

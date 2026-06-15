@@ -1,0 +1,5476 @@
+{
+  "item": [
+    {
+      "id": "078ccd93-2f15-470e-8db7-4c0096bf6910",
+      "name": "Action",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "26a18288-5f32-4ead-945e-6f92e5767dc7",
+          "name": "Octoparse updateActionProperties",
+          "request": {
+            "name": "Octoparse updateActionProperties",
+            "description": {
+              "content": "Update Action Parameters",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "updateActionProperties"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"actions\": [\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a9b475ee-a1bc-45fc-88f9-2a800c78f27e",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateActionProperties"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actions\": [\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"message\": \"success\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a5fb3287-d16b-47d1-a097-d46a142fd0d6",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateActionProperties"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actions\": [\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidParameter.Required\",\n    \"message\": \"taskId cannot be empty.\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "98df6bad-9018-4db5-a745-4b9ce12236dd",
+      "name": "Actions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "775ffa93-51ab-4e4b-9283-badebde64f76",
+          "name": "Octoparse getActions",
+          "request": {
+            "name": "Octoparse getActions",
+            "description": {
+              "content": "Get Action Parameters",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "getActions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"actionTypes\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1c226791-f065-439f-895f-2b67c76c7e87",
+              "name": "Response Example (LoopAction):",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "getActions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"actionTypes\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"taskId\": \"a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f\",\n      \"actions\": [\n        {\n          \"actionType\": \"LoopAction\",\n          \"loopType\": \"URLList\",\n          \"loopItems\": [\n            \"http://www.octoparse\"\n          ],\n          \"name\": \"Loop URLs\",\n          \"actionId\": \"ce1wg4nytr\"\n        },\n        {\n          \"actionType\": \"LoopAction\",\n          \"loopType\": \"TextList\",\n          \"loopItems\": [\n            \"Octoparse\"\n          ],\n          \"name\": \"Loop Texts\",\n          \"actionId\": \"6l3bq70xaka\"\n        }\n      ]\n    }\n  ],\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "05b07b57-be4c-4b17-9ad9-08a22fb1ae22",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "getActions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"actionTypes\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "d90bb957-4cf2-490f-915a-86fb058d3418",
+      "name": "Cloud_ Extraction",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1fd8948a-2ade-40f4-8443-5c25a8e977bd",
+          "name": "Octoparse SubtasksStatus",
+          "request": {
+            "name": "Octoparse SubtasksStatus",
+            "description": {
+              "content": "Get Subtask Status",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cloudextraction",
+                "task",
+                "subtasks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>",
+                  "description": "(Required) Page number"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<string>",
+                  "description": "(Required) Number of subtasks a page (1 to 20)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "bd9f131a-5824-4a39-bc5d-5f02ac8c7484",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "task",
+                    "subtasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"subTaskId\": \"1ea88321-6627-43db-896b-851dba5d69ec\",\n      \"status\": \"Extracting\"\n    }\n  ],\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8f014f86-8402-47c9-ab11-952847bbe50f",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "task",
+                    "subtasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9afae687-22a6-4111-986f-f908afb90e23",
+          "name": "Octoparse cloudextractionStart",
+          "request": {
+            "name": "Octoparse cloudextractionStart",
+            "description": {
+              "content": "Start Task",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cloudextraction",
+                "start"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5c2f4aaf-8e75-4153-be18-1d082de1ff43",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "start"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bf9141f4-fed8-4894-b66b-69df8e06a002",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "start"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "8a8ebe2b-78f1-4c6c-ba09-90070b219bb9",
+      "name": "Copy",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f7db02d4-8f2e-4097-b51b-94dd1ee6ed76",
+          "name": "Octoparse Copy",
+          "request": {
+            "name": "Octoparse Copy",
+            "description": {
+              "content": "Duplicate Task",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "copy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskGroupId",
+                  "value": "<string>",
+                  "description": "(Required) Task group ID (If not specified, the task will be duplicated to the current task group)"
+                },
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "68ff5b35-e7b8-4d03-b306-570788aeeb71",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "copy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"taskId\": \"a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f\",\n    \"taskName\": \"Octoparse\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "25bc4717-9671-40d9-85a9-c84041f65582",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "copy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidTaskId\",\n    \"message\": \"Invalid Id\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "59f21a38-144c-45a4-b861-74aa70e8d312",
+      "name": "Data",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7dc52f74-6a8f-4f3f-adcf-9a32dca45df3",
+          "name": "Octoparse all",
+          "request": {
+            "name": "Octoparse all",
+            "description": {
+              "content": "Get Data by Offset",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "data",
+                "all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<string>",
+                  "description": "(Required) Data offset. When offset=0, you can get data from the first data row."
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<string>",
+                  "description": "(Required) The amount of data rows(range from 1 to 1000)."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ca06cdff-ce2b-43a6-87c5-c6709eda5c90",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"offset\": 4,\n    \"total\": 100000,\n    \"restTotal\": 99996,\n    \"data\": [\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Plano\"\n      },\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Houston\"\n      },\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Austin\"\n      },\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Arlington\"\n      }\n    ]\n  },\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b5530626-d2d1-4b2c-9177-09bfd8036498",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a4ea9009-c5ce-4d7c-b4d6-3fb67af42daf",
+          "name": "Octoparse lotnoAll",
+          "request": {
+            "name": "Octoparse lotnoAll",
+            "description": {
+              "content": "Get Data From a Designated Batch by Offset",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "data",
+                "lotno",
+                "all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task Id"
+                },
+                {
+                  "disabled": false,
+                  "key": "lotno",
+                  "value": "<string>",
+                  "description": "(Required) Batch ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<string>",
+                  "description": "(Required) Data offset. When offset=0, you can get data from the first data row."
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<string>",
+                  "description": "(Required) The amount of data rows (range from 1 to 1000)."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8003c947-33da-4c0e-ad53-779c3ca13c73",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "lotno",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lotno",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"offset\": 4,\n    \"total\": 100000,\n    \"restTotal\": 99996,\n    \"data\": [\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Plano\"\n      },\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Houston\"\n      },\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Austin\"\n      },\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Arlington\"\n      }\n    ]\n  },\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5b595a14-2b76-412a-a9a9-0734925b22f9",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "lotno",
+                    "all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lotno",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2e31a039-7841-4d0f-9009-2fafbadd763b",
+          "name": "Octoparse markexported",
+          "request": {
+            "name": "Octoparse markexported",
+            "description": {
+              "content": "Mark Data as Exported",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "data",
+                "markexported"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e31d6166-e00b-4562-93ef-65ee67312936",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "markexported"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dc7cfe25-059c-4357-a260-9f390c20558e",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "markexported"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b9c85299-f509-4dac-89cd-649094c74e3d",
+          "name": "Octoparse notexported",
+          "request": {
+            "name": "Octoparse notexported",
+            "description": {
+              "content": "Get Non-Exported Data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "data",
+                "notexported"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<string>",
+                  "description": "(Required) The amount of data rows(range from 1 to 1000)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7e23da28-0a26-4a70-8444-eac9c51f1b43",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "notexported"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"total\": 100000,\n    \"current\": 4,\n    \"data\": [\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Plano\"\n      },\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Houston\"\n      },\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Austin\"\n      },\n      {\n        \"State\": \"Texas\",\n        \"City\": \"Arlington\"\n      }\n    ]\n  },\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1c6ac5eb-4c78-412c-b0bb-4c773b986290",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "notexported"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "adc8823f-8fce-45d5-acd5-b26832807acd",
+          "name": "Octoparse remove",
+          "request": {
+            "name": "Octoparse remove",
+            "description": {
+              "content": "Remove Data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "data",
+                "remove"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6dd887ec-8d99-486c-b426-363381d09038",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "remove"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7fbd7f99-b0f3-4090-b4a5-cdcf1abe516a",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "remove"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b1dd04d7-6986-4057-8926-8834848bec2d",
+      "name": "Files",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7fe8ed78-9237-4bc9-bdb5-1fa1969780ac",
+          "name": "Octoparse UpdateUrls",
+          "request": {
+            "name": "Octoparse UpdateUrls",
+            "description": {
+              "content": "Update Task URLs",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "urls{{file}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"file\": \"<file>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3f82d1e9-d260-4ee7-ad30-853e471cee69",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "urls{{file}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"file\": \"<file>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bc418c84-f50b-4c29-bed3-b097a378e9b3",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "urls{{file}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"file\": \"<file>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidTaskId\",\n    \"message\": \"Invalid task ID\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "4e6125f7-bb40-4bc4-9d4d-a1ce41d354ad",
+      "name": "Group",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7c065cf8-00be-4771-8aa2-c23f2bcaf747",
+          "name": "Octoparse MoveToGroup",
+          "request": {
+            "name": "Octoparse MoveToGroup",
+            "description": {
+              "content": "Move Task",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "moveToGroup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskGroupId",
+                  "value": "<string>",
+                  "description": "(Required) Task group ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "14822e39-6e5a-4027-85e3-21b13f6ce65b",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "moveToGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"moved\": true\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7813983e-9c1b-49b9-b8a6-bbd9d1ff0a8c",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "moveToGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidTaskId\",\n    \"message\": \"Invalid task ID\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "d969d7f2-7748-4853-9889-bb930637fb11",
+      "name": "Groups",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "067ac4ab-8b4e-41c0-88f4-732aea33e2a9",
+          "name": "Octoparse taskGroup",
+          "request": {
+            "name": "Octoparse taskGroup",
+            "description": {
+              "content": "Get Task Group Information",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "taskGroup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9ddaf0f5-f05f-4b45-910b-022c3e1f5bd1",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "taskGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"taskGroupId\": 23894,\n      \"taskGroupName\": \"Task Group 1\"\n    },\n    {\n      \"taskGroupId\": 35489,\n      \"taskGroupName\": \"Task Group 2\"\n    }\n  ],\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e8ea2478-cca5-4aeb-b695-6279a59b85b6",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "taskGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c5242150-d7d7-4c70-a6f8-6d00df621c6c",
+      "name": "Items",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "731aaed0-3acc-42fb-998c-bca6f2b3de6c",
+          "name": "Octoparse updateLoopItems",
+          "request": {
+            "name": "Octoparse updateLoopItems",
+            "description": {
+              "content": "Update Loop Item List",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "updateLoopItems"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "de6ab807-84fa-4c4c-af00-f5e5d33d0492",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateLoopItems"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"message\": \"success\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f25ee88b-23b8-4bc2-85b0-204b763774f9",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateLoopItems"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"TaskUpdateFail\",\n    \"message\": \"Update fails.\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b43005f5-2632-4f46-a204-cd9be6dd3a09",
+      "name": "Loop",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3e93636d-e557-4eeb-9fa5-5659bfca8811",
+          "name": "Octoparse updateLoopItems",
+          "request": {
+            "name": "Octoparse updateLoopItems",
+            "description": {
+              "content": "Update Loop Item List",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "updateLoopItems"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "827e254b-735b-4750-ae1a-96b639ec402f",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateLoopItems"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"message\": \"success\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f44da858-4086-435f-b33e-14ce0580fde6",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateLoopItems"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"TaskUpdateFail\",\n    \"message\": \"Update fails.\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c07685f1-645b-4178-b764-b47541d1f00a",
+      "name": "Move",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4c4a1a95-8168-4a2d-9f63-2211d3b081cc",
+          "name": "Octoparse MoveToGroup",
+          "request": {
+            "name": "Octoparse MoveToGroup",
+            "description": {
+              "content": "Move Task",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "moveToGroup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskGroupId",
+                  "value": "<string>",
+                  "description": "(Required) Task group ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "42bed8fa-6b10-4133-ac43-5753bb2b556e",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "moveToGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"moved\": true\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "93be0d81-8e04-4b87-83f2-788b9499083b",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "moveToGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidTaskId\",\n    \"message\": \"Invalid task ID\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "69b0a075-c689-4f46-85d6-0b5a4a3abc28",
+      "name": "Properties",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c2e85f26-d496-42a4-b816-9fe15de680cc",
+          "name": "Octoparse updateActionProperties",
+          "request": {
+            "name": "Octoparse updateActionProperties",
+            "description": {
+              "content": "Update Action Parameters",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "updateActionProperties"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"actions\": [\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6acf47e7-e10b-4a20-8632-2ab9efa354bb",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateActionProperties"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actions\": [\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"message\": \"success\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a390535d-a759-440a-81ad-1ef8e74b9ea5",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateActionProperties"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actions\": [\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidParameter.Required\",\n    \"message\": \"taskId cannot be empty.\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "61820290-de7d-4aea-ae6d-b1caeb58a2ca",
+      "name": "Remove",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "61423adb-7021-4d6e-93ca-57df3c150fc1",
+          "name": "Octoparse remove",
+          "request": {
+            "name": "Octoparse remove",
+            "description": {
+              "content": "Remove Data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "data",
+                "remove"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "768acbe6-d89f-4251-939e-1606304dc92a",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "remove"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "93c70c80-4756-4ded-a761-eac475c64e1b",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data",
+                    "remove"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "6687a79c-59ba-4801-8fe5-460482e15f6e",
+      "name": "Search",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9f9eeb0e-5977-4d99-a7cd-3f409648f3a7",
+          "name": "Octoparse Search",
+          "request": {
+            "name": "Octoparse Search",
+            "description": {
+              "content": "Search Task",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskGroupId",
+                  "value": "<string>",
+                  "description": "(Required) Task group ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ac15e42f-3f5a-4e9e-b448-377aecbe0537",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"taskId\": \"a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f\",\n      \"taskName\": \"Task Group 1\"\n    },\n    {\n      \"taskId\": \"86b9bdf7-9aaa-22236-9ccf-b3279469df01\",\n      \"taskName\": \"Task Group 2\"\n    }\n  ],\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "99bbaa64-20dc-4b66-bb32-5c391a91419a",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidParameter\",\n    \"message\": \"Invalid field\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "03d4510c-e363-4e0a-afa2-f8e4a696e62b",
+      "name": "Statuses",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0736a810-2a95-41ba-a3e7-b4713f9a195c",
+          "name": "Octoparse TaskStatus",
+          "request": {
+            "name": "Octoparse TaskStatus",
+            "description": {
+              "content": "Get Task Status",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cloudextraction",
+                "statuses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a0b160b4-92b5-48d6-ba59-9cca5feda66b",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "statuses"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"taskId\": \"a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f\",\n      \"taskName\": \"Octoparse\",\n      \"status\": \"Extracting\"\n    },\n    {\n      \"taskId\": \"86b9bdf7-9aaa-22236-9ccf-b3279469df01\",\n      \"taskName\": \"Octoparse2\",\n      \"status\": \"Stopped\"\n    }\n  ],\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "301ee03f-1616-4712-8a57-6586dc7fc8f1",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "statuses"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5cbfdabb-1663-4c71-98f5-ffd68165a87d",
+          "name": "Octoparse TaskStatusV2",
+          "request": {
+            "name": "Octoparse TaskStatusV2",
+            "description": {
+              "content": "Get Task Status V2",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cloudextraction",
+                "statuses",
+                "v2"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "73ef2501-8e1e-4ab2-9c98-f12f3d72463f",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "statuses",
+                    "v2"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"taskId\": \"a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f\",\n      \"status\": \"Extracting\",\n      \"currentTotalExtractCount\": 0,\n      \"executedTimes\": 1,\n      \"subTaskCount\": 1,\n      \"nextExecuteTime\": \"2018-04-04T20:34:20.973\",\n      \"endExecuteTime\": \"2018-04-04T18:34:20.973\",\n      \"startExecuteTime\": \"2018-04-04T18:34:20.973\"\n    }\n  ],\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "36873224-99d2-4f53-8653-eafbb8ccf4b3",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "statuses",
+                    "v2"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "45072213-15b1-42d2-b546-51990b2b3352",
+      "name": "Stop",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4da406f4-6c00-43b2-88b6-c4dc0f589b33",
+          "name": "Octoparse cloudextractionStop",
+          "request": {
+            "name": "Octoparse cloudextractionStop",
+            "description": {
+              "content": "Stop Task",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cloudextraction",
+                "stop"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4fd03686-0582-4ffe-b72e-36cbee1a2db9",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "stop"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "25aa5db6-9e52-498a-bbe2-c347a5adf958",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "stop"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2cd2ddb5-3d98-4750-80bc-cf7c3d9b3ac9",
+          "name": "Octoparse cloudextractionSubtasksStop",
+          "request": {
+            "name": "Octoparse cloudextractionSubtasksStop",
+            "description": {
+              "content": "Stop Subtasks",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cloudextraction",
+                "subtasks{{stop}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ab2738e4-d505-4304-aec4-6cc726474e7e",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "subtasks{{stop}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f2717f48-6e3b-4822-9d2b-324fc030f0c3",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "subtasks{{stop}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "15ad34bb-fe65-4bf7-9f09-d70e70fbbf9e",
+      "name": "Subtasks",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "03a72420-5f6d-4a13-a9ac-0a8a68282032",
+          "name": "Octoparse cloudextractionSubtasksStart",
+          "request": {
+            "name": "Octoparse cloudextractionSubtasksStart",
+            "description": {
+              "content": "Start subtasks",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cloudextraction",
+                "subtasks{{start}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "eb3b15a3-7b1c-4a16-a4b8-6d97a799758b",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "subtasks{{start}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "554de490-b6a8-4301-94bf-0f6510a6793a",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "subtasks{{start}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "88dafaee-08d1-4b42-95d8-e7b0de83b744",
+          "name": "Octoparse cloudextractionSubtasksStop",
+          "request": {
+            "name": "Octoparse cloudextractionSubtasksStop",
+            "description": {
+              "content": "Stop Subtasks",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cloudextraction",
+                "subtasks{{stop}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8c5491e9-8f97-451d-8adf-c3f6212648bc",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "subtasks{{stop}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dcd93aae-b278-47c8-b414-9ca70b8c55f5",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "subtasks{{stop}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "cf7037cb-968a-4e93-b556-d071de95900e",
+      "name": "Task",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b8d3bcdd-e3f7-47dd-8027-e3f74feb8ede",
+          "name": "Octoparse SubtasksStatus",
+          "request": {
+            "name": "Octoparse SubtasksStatus",
+            "description": {
+              "content": "Get Subtask Status",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cloudextraction",
+                "task",
+                "subtasks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>",
+                  "description": "(Required) Page number"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "<string>",
+                  "description": "(Required) Number of subtasks a page (1 to 20)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "20528475-1169-4ecf-8bd6-6bbe5a34eb09",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "task",
+                    "subtasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"subTaskId\": \"1ea88321-6627-43db-896b-851dba5d69ec\",\n      \"status\": \"Extracting\"\n    }\n  ],\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6523208b-0e5c-4670-bf39-d05b4c8b7fc9",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "task",
+                    "subtasks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dbc61288-6d2a-4bea-8835-16a936fb2432",
+          "name": "Octoparse Copy",
+          "request": {
+            "name": "Octoparse Copy",
+            "description": {
+              "content": "Duplicate Task",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "copy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskGroupId",
+                  "value": "<string>",
+                  "description": "(Required) Task group ID (If not specified, the task will be duplicated to the current task group)"
+                },
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3d937405-ab18-4437-88cf-9bd4ebdde41e",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "copy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"taskId\": \"a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f\",\n    \"taskName\": \"Octoparse\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "03c7e7fa-840a-42d4-8037-5d2d2e127601",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "copy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidTaskId\",\n    \"message\": \"Invalid Id\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4eb058e4-fa61-4a64-a2b7-f66d7bbe8bad",
+          "name": "Octoparse MoveToGroup",
+          "request": {
+            "name": "Octoparse MoveToGroup",
+            "description": {
+              "content": "Move Task",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "moveToGroup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskGroupId",
+                  "value": "<string>",
+                  "description": "(Required) Task group ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ee3c04c1-9f53-49e7-aa17-d32206c63b95",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "moveToGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"moved\": true\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bb40d146-7cfd-4ee6-a39d-53d3e72ebd97",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "moveToGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidTaskId\",\n    \"message\": \"Invalid task ID\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d9f8b71f-70ff-4108-99d5-296a8ba51e9a",
+          "name": "Octoparse Search",
+          "request": {
+            "name": "Octoparse Search",
+            "description": {
+              "content": "Search Task",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskGroupId",
+                  "value": "<string>",
+                  "description": "(Required) Task group ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d46810ad-ce56-4371-8cd7-8a536482b56e",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"taskId\": \"a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f\",\n      \"taskName\": \"Task Group 1\"\n    },\n    {\n      \"taskId\": \"86b9bdf7-9aaa-22236-9ccf-b3279469df01\",\n      \"taskName\": \"Task Group 2\"\n    }\n  ],\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "93421a32-ff9e-4524-bc0d-9bf39a04cb7f",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidParameter\",\n    \"message\": \"Invalid field\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9b618101-3cae-48cd-9def-1ed6b04fef33",
+          "name": "Octoparse UpdateUrls",
+          "request": {
+            "name": "Octoparse UpdateUrls",
+            "description": {
+              "content": "Update Task URLs",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "urls{{file}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"file\": \"<file>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ad85df23-11d7-473c-a5b6-12f7b2c44931",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "urls{{file}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"file\": \"<file>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e701892d-00b3-4da2-8502-2dc1d1348dc0",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "urls{{file}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"file\": \"<file>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidTaskId\",\n    \"message\": \"Invalid task ID\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d3b354a7-0931-4270-b42c-52dde34086ff",
+          "name": "Octoparse taskGroup",
+          "request": {
+            "name": "Octoparse taskGroup",
+            "description": {
+              "content": "Get Task Group Information",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "taskGroup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e69ad028-5815-4fd7-b737-ce43615ad604",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "taskGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"taskGroupId\": 23894,\n      \"taskGroupName\": \"Task Group 1\"\n    },\n    {\n      \"taskGroupId\": 35489,\n      \"taskGroupName\": \"Task Group 2\"\n    }\n  ],\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5587947c-8a58-4444-972a-b4849731fb45",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "taskGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8d7bb625-0efd-4efc-88f5-87e4058fcef3",
+          "name": "Octoparse getActions",
+          "request": {
+            "name": "Octoparse getActions",
+            "description": {
+              "content": "Get Action Parameters",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "getActions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"actionTypes\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "970bee37-c70c-4438-92f0-bd73076c51d2",
+              "name": "Response Example (LoopAction):",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "getActions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"actionTypes\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"taskId\": \"a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f\",\n      \"actions\": [\n        {\n          \"actionType\": \"LoopAction\",\n          \"loopType\": \"URLList\",\n          \"loopItems\": [\n            \"http://www.octoparse\"\n          ],\n          \"name\": \"Loop URLs\",\n          \"actionId\": \"ce1wg4nytr\"\n        },\n        {\n          \"actionType\": \"LoopAction\",\n          \"loopType\": \"TextList\",\n          \"loopItems\": [\n            \"Octoparse\"\n          ],\n          \"name\": \"Loop Texts\",\n          \"actionId\": \"6l3bq70xaka\"\n        }\n      ]\n    }\n  ],\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4dd927e6-57a3-4459-9ad4-db8a20d17bf6",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "getActions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"actionTypes\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d29b5b73-5294-426b-a1ef-5e4041df1ef7",
+          "name": "Octoparse updateActionProperties",
+          "request": {
+            "name": "Octoparse updateActionProperties",
+            "description": {
+              "content": "Update Action Parameters",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "updateActionProperties"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"actions\": [\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "46825a74-6380-45a3-a9df-58c45ca45076",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateActionProperties"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actions\": [\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"message\": \"success\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7a6ca662-8c35-461b-b968-3c1c9c8864ec",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateActionProperties"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actions\": [\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"actionType\": \"<string>\",\n      \"actionId\": \"<string>\",\n      \"properties\": [\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidParameter.Required\",\n    \"message\": \"taskId cannot be empty.\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7e3b444a-acfa-42e0-a4f2-df2599509983",
+          "name": "Octoparse updateLoopItems",
+          "request": {
+            "name": "Octoparse updateLoopItems",
+            "description": {
+              "content": "Update Loop Item List",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "updateLoopItems"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ad56f159-dc98-45a2-84d0-3bfaf2d87820",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateLoopItems"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"message\": \"success\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "cbbdcab4-5b2e-4032-9b93-366078e0d55c",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateLoopItems"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"TaskUpdateFail\",\n    \"message\": \"Update fails.\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "575dbf4d-42c0-40d4-9f00-d270e4122788",
+      "name": "Token",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "71772917-b9fd-472b-8ac6-945ead498ff7",
+          "name": "Octoparse getToken",
+          "request": {
+            "name": "Octoparse getToken",
+            "description": {
+              "content": "Obtain a New Token",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"grant_type\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e07a43cc-a5bd-45e4-967a-5ec03db56ff7",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"grant_type\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"access_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6ImdXS3hWc0F4SHhaMDlDcWh6NkNJb3ciLCJ0eXAiOiJhdCtqd3QifQ.eyJuYmYiOjE2MzY0NjIyNzAsImV4cCI6MTYzNjU0ODY2OSwiaXNzIjoiaHR0cDovL3Rlc3QuaWRlbnRpdHkuYmF6aHVheXUuY29tIiwiY2xpZW50X2lkIjoiT2N0b3B1cyIsInN1YiI6IjllOGJiM2VhLWUwMWQtNGFlZC05ODM3LTVhMWUyODg0NWI5ZSIsImF1dGhfdGltZSI6MTYzNjQ2MjI3MCwiaWRwIjoibG9jYWwiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjllOGJiM2VhLWUwMWQtNGFlZC05ODM3LTVhMWUyODg0NWI5ZSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJ0ZXN0d2VuIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVzdHdlbiIsInVuaXF1ZV9uYW1lIjoidGVzdHdlbiIsInJlZ2lzdGVyX2RhdGUiOiIxMS8wNC8yMDE2IDA4OjM4OjE2ICswODowMCIsImxhc3RfbG9naW5fZGF0ZSI6IjA0LzIyLzIwMTkgMDk6MDE6MDIgKzA4OjAwIiwibGFzdF9wYXNzd29yZF9jaGFuZ2VkX2RhdGUiOiIwMS8yMy8yMDE5IDA4OjMwOjMxICswODowMCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6IndlbmRpQHNraWVlci5jb20iLCJlbWFpbCI6IndlbmRpQHNraWVlci5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwic2NvcGUiOlsiZW1haWwiLCJvcGVuaWQiLCJyb2xlcyIsIm9mZmxpbmVfYWNjZXNzIl0sImFtciI6WyJwd2QiXX0.ARhbBfzI1xS6yo-Ue1CFHzMaUIfzw4gJlubNBOkUT4SSTlhuS4bVQ4t4UHuYGbE9VX6XgNVgkcDnx6XapqcPohSy7vPv9TIAsjtbrQSA3mj13SnVVAPWwfAVJ-I7g9HDnyPEEOVSvmZUJhiz-irH5L0ojbnt3ck2rQ9tIFuSd7j2eh5BS4ItjNoHY00rh_QPZltk66a9q-fNE33GrxOaXUdHH47WMlsENnh1gybB7QtGtd6bZ982Qa9JljpFnZWSdEf4VfkN4JmhkUTTC908DqS3stT-LD-9tpztFwB54sd0D4CyOBnESkKrUwjxchYYZo4l1O7auiZVGV48YhZYMw\",\n    \"expires_in\": \"86399\",\n    \"token_type\": \"Bearer\",\n    \"refresh_token\": \"SSc1Uf56BRfNfSewsZ0FJCHjfqI5FwGW3k2QfiRplN8\"\n  },\n  \"requestId\": \"0HMD3FSLHJRVO:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "abca9551-ded5-4fb1-a099-a0ca4386f1e9",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\",\n  \"grant_type\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"Invalid.Grant\",\n    \"message\": \"Incorrect username or password.\"\n  },\n  \"requestId\": \"0HMD43G9J9JV9:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://openapi.octoparse.com/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "881bbba9-5eb9-421e-8d26-4dd92440df5b",
+    "name": "Octoparse",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Octoparse is your no-coding solution for web scraping to turn pages into\nstructured data within clicks.",
+      "type": "text/plain"
+    }
+  }
+}
