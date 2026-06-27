@@ -89,7 +89,7 @@ common:
   - name: Web Scraping Tool & Free Web Crawlers | Octoparse
     description: 'null'
     url: https://identity.octoparse.com/IntersignUp
-    type: SignUp
+    type: Signup
   - name: FAQ | Help Center
     description: 'null'
     url: https://helpcenter.octoparse.com/en/collections/3590192-faq
