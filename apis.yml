@@ -53,6 +53,8 @@ maintainers:
     email: kin@apievangelist.com
 specificationVersion: '0.19'
 common:
+  - type: DomainSecurity
+    url: security/octoparse-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/octoparse
   - type: LinkedIn
