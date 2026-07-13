@@ -3,12 +3,13 @@
   "feeds": [
     {
       "source": "https://www.octoparse.com/blog",
-      "feed_url": "",
-      "saved": 2,
-      "method": "agent-scrape"
+      "feed_url": "https://www.octoparse.com/blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "post_count": 11,
-  "fetched": "2026-06-27T12:57:33Z",
-  "agent_pulled": "2026-06-27"
+  "post_count": 12,
+  "fetched": "2026-07-11T11:50:51Z",
+  "agent_pulled": "2026-07-04"
 }
