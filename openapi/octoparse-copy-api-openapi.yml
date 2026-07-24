@@ -1,0 +1,86 @@
+openapi: 3.1.0
+info:
+  title: Octoparse Action Copy API
+  version: 1.0.0
+  description: 'Octoparse is your no-coding solution for web scraping to turn pages into
+
+    structured data within clicks.'
+servers:
+- url: https://openapi.octoparse.com/
+  description: API Server URL
+tags:
+- name: Copy
+paths:
+  task/copy:
+    post:
+      tags:
+      - Copy
+      summary: Octoparse Copy
+      description: Duplicate Task
+      requestBody:
+        content:
+          application/json: {}
+      parameters:
+      - in: query
+        name: taskGroupId
+        description: Task group ID (If not specified, the task will be duplicated to the current task group)
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: taskId
+        description: Task ID
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      taskId:
+                        type: string
+                      taskName:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                      taskId: a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f
+                      taskName: Octoparse
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: InvalidTaskId
+                      message: Invalid Id
+                    requestId: 0HMCVDHG1V3E6:00000002

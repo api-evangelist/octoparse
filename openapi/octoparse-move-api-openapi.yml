@@ -1,0 +1,83 @@
+openapi: 3.1.0
+info:
+  title: Octoparse Action Move API
+  version: 1.0.0
+  description: 'Octoparse is your no-coding solution for web scraping to turn pages into
+
+    structured data within clicks.'
+servers:
+- url: https://openapi.octoparse.com/
+  description: API Server URL
+tags:
+- name: Move
+paths:
+  task/moveToGroup:
+    post:
+      tags:
+      - Move
+      summary: Octoparse MoveToGroup
+      description: Move Task
+      requestBody:
+        content:
+          application/json: {}
+      parameters:
+      - in: query
+        name: taskGroupId
+        description: Task group ID
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: taskId
+        description: Task ID
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      moved:
+                        type: boolean
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                      moved: true
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: InvalidTaskId
+                      message: Invalid task ID
+                    requestId: 0HMCVDHG1V3E6:00000002

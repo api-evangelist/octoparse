@@ -1,0 +1,743 @@
+openapi: 3.1.0
+info:
+  title: Octoparse Action Task API
+  version: 1.0.0
+  description: 'Octoparse is your no-coding solution for web scraping to turn pages into
+
+    structured data within clicks.'
+servers:
+- url: https://openapi.octoparse.com/
+  description: API Server URL
+tags:
+- name: Task
+paths:
+  cloudextraction/task/subtasks:
+    get:
+      tags:
+      - Task
+      summary: Octoparse SubtasksStatus
+      description: Get Subtask Status
+      requestBody:
+        content:
+          application/json: {}
+      parameters:
+      - in: query
+        name: taskId
+        description: Task ID
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: page
+        description: Page number
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: size
+        description: Number of subtasks a page (1 to 20)
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        subTaskId:
+                          type: string
+                        status:
+                          type: string
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                    - subTaskId: 1ea88321-6627-43db-896b-851dba5d69ec
+                      status: Extracting
+                    requestId: 0HMD469L0I8R0:00000001
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: ServerError
+                      message: Internal Server Error
+                    requestId: 0HMD469L0I8R0:00000001
+  task/copy:
+    post:
+      tags:
+      - Task
+      summary: Octoparse Copy
+      description: Duplicate Task
+      requestBody:
+        content:
+          application/json: {}
+      parameters:
+      - in: query
+        name: taskGroupId
+        description: Task group ID (If not specified, the task will be duplicated to the current task group)
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: taskId
+        description: Task ID
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      taskId:
+                        type: string
+                      taskName:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                      taskId: a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f
+                      taskName: Octoparse
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: InvalidTaskId
+                      message: Invalid Id
+                    requestId: 0HMCVDHG1V3E6:00000002
+  task/moveToGroup:
+    post:
+      tags:
+      - Task
+      summary: Octoparse MoveToGroup
+      description: Move Task
+      requestBody:
+        content:
+          application/json: {}
+      parameters:
+      - in: query
+        name: taskGroupId
+        description: Task group ID
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: taskId
+        description: Task ID
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      moved:
+                        type: boolean
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                      moved: true
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: InvalidTaskId
+                      message: Invalid task ID
+                    requestId: 0HMCVDHG1V3E6:00000002
+  task/search:
+    get:
+      tags:
+      - Task
+      summary: Octoparse Search
+      description: Search Task
+      requestBody:
+        content:
+          application/json: {}
+      parameters:
+      - in: query
+        name: taskGroupId
+        description: Task group ID
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        taskId:
+                          type: string
+                        taskName:
+                          type: string
+                      required:
+                      - taskId
+                      - taskName
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                    - taskId: a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f
+                      taskName: Task Group 1
+                    - taskId: 86b9bdf7-9aaa-22236-9ccf-b3279469df01
+                      taskName: Task Group 2
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: InvalidParameter
+                      message: Invalid field
+                    requestId: 0HMCVDHG1V3E6:00000002
+  task/urls{file}:
+    post:
+      tags:
+      - Task
+      summary: Octoparse UpdateUrls
+      description: Update Task URLs
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              properties:
+                file:
+                  type: file
+                  description: 'URL path: C:\Username\URLs.txt'
+              type: object
+              required:
+              - file
+      parameters:
+      - in: query
+        name: taskId
+        description: Task ID
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: 'null'
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data: null
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: InvalidTaskId
+                      message: Invalid task ID
+                    requestId: 0HMCVDHG1V3E6:00000002
+  taskGroup:
+    get:
+      tags:
+      - Task
+      summary: Octoparse taskGroup
+      description: Get Task Group Information
+      requestBody:
+        content:
+          application/json: {}
+      parameters: []
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        taskGroupId:
+                          type: number
+                        taskGroupName:
+                          type: string
+                      required:
+                      - taskGroupId
+                      - taskGroupName
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                    - taskGroupId: 23894
+                      taskGroupName: Task Group 1
+                    - taskGroupId: 35489
+                      taskGroupName: Task Group 2
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: ServerError
+                      message: Internal Server Error
+                    requestId: 0HMD469L0I8R0:00000001
+  task/getActions:
+    post:
+      tags:
+      - Task
+      summary: Octoparse getActions
+      description: Get Action Parameters
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $schema: http://json-schema.org/draft-04/schema#
+              title: Request Body Example
+              type: object
+              properties:
+                taskIds:
+                  type: array
+                  items:
+                    type: string
+                actionTypes:
+                  type: array
+                  items:
+                    type: string
+              required:
+              - taskIds
+              - actionTypes
+      parameters: []
+      responses:
+        '200':
+          description: 'Response Example (LoopAction):'
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: 'Response Example (LoopAction):'
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        taskId:
+                          type: string
+                        actions:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              actionType:
+                                type: string
+                              loopType:
+                                type: string
+                              loopItems:
+                                type: array
+                                items:
+                                  type: string
+                              name:
+                                type: string
+                              actionId:
+                                type: string
+                            required:
+                            - actionType
+                            - loopType
+                            - loopItems
+                            - name
+                            - actionId
+                  requestId:
+                    type: string
+              examples:
+                'Response Example (LoopAction):':
+                  value:
+                    data:
+                    - taskId: a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f
+                      actions:
+                      - actionType: LoopAction
+                        loopType: URLList
+                        loopItems:
+                        - http://www.octoparse
+                        name: Loop URLs
+                        actionId: ce1wg4nytr
+                      - actionType: LoopAction
+                        loopType: TextList
+                        loopItems:
+                        - Octoparse
+                        name: Loop Texts
+                        actionId: 6l3bq70xaka
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: ServerError
+                      message: Internal Server Error
+                    requestId: 0HMD469L0I8R0:00000001
+  task/updateActionProperties:
+    post:
+      tags:
+      - Task
+      summary: Octoparse updateActionProperties
+      description: Update Action Parameters
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $schema: http://json-schema.org/draft-04/schema#
+              title: Request Body Example (EnterTextAction)
+              type: object
+              properties:
+                taskId:
+                  type: string
+                  description: Task ID
+                actions:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      actionType:
+                        type: string
+                        description: Action type. Currently supporting &quot;NavigateAction&quot; (Go to Web Page), &quot;EnterTextAction&quot; (Enter Text) and &quot;LoopAction&quot; (Loop Item).
+                      actionId:
+                        type: string
+                        description: Action API call name. Get it by clicking the API icon in the action setting or using Get Action Parameters.
+                      properties:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              description: Parameter name. Check the currently supported parameters at Action Parameters.
+                            value:
+                              type: string
+                              description: Parameter value
+                          required:
+                          - name
+                          - value
+                    required:
+                    - actionType
+                    - actionId
+                    - properties
+              required:
+              - taskId
+              - actions
+      parameters: []
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                      message: success
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: InvalidParameter.Required
+                      message: taskId cannot be empty.
+                    requestId: 0HMCVDHG1V3E6:00000002
+  task/updateLoopItems:
+    post:
+      tags:
+      - Task
+      summary: Octoparse updateLoopItems
+      description: Update Loop Item List
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $schema: http://json-schema.org/draft-04/schema#
+              title: Request Body Example
+              type: object
+              properties:
+                taskId:
+                  type: string
+                  description: Task ID
+                actionId:
+                  type: string
+                  description: Action API call name. You can get it by clicking the API icon in the settings of one action or using Get Action Parameters.
+                loopType:
+                  type: string
+                  description: Loop mode. TextList (Text list) or UrlList (List of URLs).
+                loopItems:
+                  type: array
+                  items:
+                    type: string
+                isAppend:
+                  type: bool
+                  description: Add the value to the current list or replace the current list. &quot;true&quot; means to add the value to the current list; &quot;false&quot; means to replace the current list.
+              required:
+              - taskId
+              - actionId
+              - loopType
+              - loopItems
+              - isAppend
+      parameters: []
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                      message: success
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: TaskUpdateFail
+                      message: Update fails.
+                    requestId: 0HMCVDHG1V3E6:00000002

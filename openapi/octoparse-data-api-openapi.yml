@@ -1,0 +1,447 @@
+openapi: 3.1.0
+info:
+  title: Octoparse Action Data API
+  version: 1.0.0
+  description: 'Octoparse is your no-coding solution for web scraping to turn pages into
+
+    structured data within clicks.'
+servers:
+- url: https://openapi.octoparse.com/
+  description: API Server URL
+tags:
+- name: Data
+paths:
+  data/all:
+    get:
+      tags:
+      - Data
+      summary: Octoparse all
+      description: Get Data by Offset
+      requestBody:
+        content:
+          application/json: {}
+      parameters:
+      - in: query
+        name: taskId
+        description: Task ID
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: offset
+        description: Data offset. When offset=0, you can get data from the first data row.
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: size
+        description: The amount of data rows(range from 1 to 1000).
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      offset:
+                        type: number
+                      total:
+                        type: number
+                      restTotal:
+                        type: number
+                      data:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            State:
+                              type: string
+                            City:
+                              type: string
+                          required:
+                          - State
+                          - City
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                      offset: 4
+                      total: 100000
+                      restTotal: 99996
+                      data:
+                      - State: Texas
+                        City: Plano
+                      - State: Texas
+                        City: Houston
+                      - State: Texas
+                        City: Austin
+                      - State: Texas
+                        City: Arlington
+                    requestId: 0HMD469L0I8Q1:00000001
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: ServerError
+                      message: Internal Server Error
+                    requestId: 0HMD469L0I8R0:00000001
+  data/lotno/all:
+    get:
+      tags:
+      - Data
+      summary: Octoparse lotnoAll
+      description: Get Data From a Designated Batch by Offset
+      requestBody:
+        content:
+          application/json: {}
+      parameters:
+      - in: query
+        name: taskId
+        description: Task Id
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: lotno
+        description: Batch ID
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: offset
+        description: Data offset. When offset=0, you can get data from the first data row.
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: size
+        description: The amount of data rows (range from 1 to 1000).
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      offset:
+                        type: number
+                      total:
+                        type: number
+                      restTotal:
+                        type: number
+                      data:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            State:
+                              type: string
+                            City:
+                              type: string
+                          required:
+                          - State
+                          - City
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                      offset: 4
+                      total: 100000
+                      restTotal: 99996
+                      data:
+                      - State: Texas
+                        City: Plano
+                      - State: Texas
+                        City: Houston
+                      - State: Texas
+                        City: Austin
+                      - State: Texas
+                        City: Arlington
+                    requestId: 0HMD469L0I8Q1:00000001
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: ServerError
+                      message: Internal Server Error
+                    requestId: 0HMD469L0I8R0:00000001
+  data/markexported:
+    post:
+      tags:
+      - Data
+      summary: Octoparse markexported
+      description: Mark Data as Exported
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $schema: http://json-schema.org/draft-04/schema#
+              title: Request Body Example
+              type: object
+              properties:
+                taskId:
+                  type: string
+                  description: Task ID
+              required:
+              - taskId
+      parameters: []
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: 'null'
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data: null
+                    requestId: 0HMD469L0I8Q1:00000001
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: ServerError
+                      message: Internal Server Error
+                    requestId: 0HMD469L0I8R0:00000001
+  data/notexported:
+    get:
+      tags:
+      - Data
+      summary: Octoparse notexported
+      description: Get Non-Exported Data
+      requestBody:
+        content:
+          application/json: {}
+      parameters:
+      - in: query
+        name: taskId
+        description: Task ID
+        required: true
+        schema:
+          type: string
+      - in: query
+        name: size
+        description: The amount of data rows(range from 1 to 1000)
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      total:
+                        type: number
+                      current:
+                        type: number
+                      data:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            State:
+                              type: string
+                            City:
+                              type: string
+                          required:
+                          - State
+                          - City
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                      total: 100000
+                      current: 4
+                      data:
+                      - State: Texas
+                        City: Plano
+                      - State: Texas
+                        City: Houston
+                      - State: Texas
+                        City: Austin
+                      - State: Texas
+                        City: Arlington
+                    requestId: 0HMD469L0I8Q1:00000001
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: ServerError
+                      message: Internal Server Error
+                    requestId: 0HMD469L0I8R0:00000001
+  data/remove:
+    post:
+      tags:
+      - Data
+      summary: Octoparse remove
+      description: Remove Data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $schema: http://json-schema.org/draft-04/schema#
+              title: Request Body Example
+              type: object
+              properties:
+                taskId:
+                  type: string
+                  description: Task ID
+              required:
+              - taskId
+      parameters: []
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: 'null'
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data: null
+                    requestId: 0HMD469L0I8Q1:00000001
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: ServerError
+                      message: Internal Server Error
+                    requestId: 0HMD469L0I8R0:00000001

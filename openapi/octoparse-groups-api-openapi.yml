@@ -1,0 +1,81 @@
+openapi: 3.1.0
+info:
+  title: Octoparse Action Groups API
+  version: 1.0.0
+  description: 'Octoparse is your no-coding solution for web scraping to turn pages into
+
+    structured data within clicks.'
+servers:
+- url: https://openapi.octoparse.com/
+  description: API Server URL
+tags:
+- name: Groups
+paths:
+  taskGroup:
+    get:
+      tags:
+      - Groups
+      summary: Octoparse taskGroup
+      description: Get Task Group Information
+      requestBody:
+        content:
+          application/json: {}
+      parameters: []
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        taskGroupId:
+                          type: number
+                        taskGroupName:
+                          type: string
+                      required:
+                      - taskGroupId
+                      - taskGroupName
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                    - taskGroupId: 23894
+                      taskGroupName: Task Group 1
+                    - taskGroupId: 35489
+                      taskGroupName: Task Group 2
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: ServerError
+                      message: Internal Server Error
+                    requestId: 0HMD469L0I8R0:00000001

@@ -1,0 +1,111 @@
+openapi: 3.1.0
+info:
+  title: Octoparse Action Properties API
+  version: 1.0.0
+  description: 'Octoparse is your no-coding solution for web scraping to turn pages into
+
+    structured data within clicks.'
+servers:
+- url: https://openapi.octoparse.com/
+  description: API Server URL
+tags:
+- name: Properties
+paths:
+  task/updateActionProperties:
+    post:
+      tags:
+      - Properties
+      summary: Octoparse updateActionProperties
+      description: Update Action Parameters
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $schema: http://json-schema.org/draft-04/schema#
+              title: Request Body Example (EnterTextAction)
+              type: object
+              properties:
+                taskId:
+                  type: string
+                  description: Task ID
+                actions:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      actionType:
+                        type: string
+                        description: Action type. Currently supporting &quot;NavigateAction&quot; (Go to Web Page), &quot;EnterTextAction&quot; (Enter Text) and &quot;LoopAction&quot; (Loop Item).
+                      actionId:
+                        type: string
+                        description: Action API call name. Get it by clicking the API icon in the action setting or using Get Action Parameters.
+                      properties:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              description: Parameter name. Check the currently supported parameters at Action Parameters.
+                            value:
+                              type: string
+                              description: Parameter value
+                          required:
+                          - name
+                          - value
+                    required:
+                    - actionType
+                    - actionId
+                    - properties
+              required:
+              - taskId
+              - actions
+      parameters: []
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                      message: success
+                    requestId: 0HMCVDHG1V3E6:00000002
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: InvalidParameter.Required
+                      message: taskId cannot be empty.
+                    requestId: 0HMCVDHG1V3E6:00000002

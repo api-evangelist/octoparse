@@ -1,0 +1,189 @@
+openapi: 3.1.0
+info:
+  title: Octoparse Action Statuses API
+  version: 1.0.0
+  description: 'Octoparse is your no-coding solution for web scraping to turn pages into
+
+    structured data within clicks.'
+servers:
+- url: https://openapi.octoparse.com/
+  description: API Server URL
+tags:
+- name: Statuses
+paths:
+  cloudextraction/statuses:
+    post:
+      tags:
+      - Statuses
+      summary: Octoparse TaskStatus
+      description: Get Task Status
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $schema: http://json-schema.org/draft-04/schema#
+              title: Request Body Example
+              type: object
+              properties:
+                taskIds:
+                  type: array
+                  items:
+                    type: string
+              required:
+              - taskIds
+      parameters: []
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        taskId:
+                          type: string
+                        taskName:
+                          type: string
+                        status:
+                          type: string
+                      required:
+                      - taskId
+                      - taskName
+                      - status
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                    - taskId: a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f
+                      taskName: Octoparse
+                      status: Extracting
+                    - taskId: 86b9bdf7-9aaa-22236-9ccf-b3279469df01
+                      taskName: Octoparse2
+                      status: Stopped
+                    requestId: 0HMD469L0I8R0:00000001
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: ServerError
+                      message: Internal Server Error
+                    requestId: 0HMD469L0I8R0:00000001
+  cloudextraction/statuses/v2:
+    post:
+      tags:
+      - Statuses
+      summary: Octoparse TaskStatusV2
+      description: Get Task Status V2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $schema: http://json-schema.org/draft-04/schema#
+              title: Request Body Example
+              type: object
+              properties:
+                taskIds:
+                  type: array
+                  items:
+                    type: string
+              required:
+              - taskIds
+      parameters: []
+      responses:
+        '200':
+          description: Response Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Response Example
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        taskId:
+                          type: string
+                        status:
+                          type: string
+                        currentTotalExtractCount:
+                          type: number
+                        executedTimes:
+                          type: number
+                        subTaskCount:
+                          type: number
+                        nextExecuteTime:
+                          type: string
+                        endExecuteTime:
+                          type: string
+                        startExecuteTime:
+                          type: string
+                  requestId:
+                    type: string
+              examples:
+                Response Example:
+                  value:
+                    data:
+                    - taskId: a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f
+                      status: Extracting
+                      currentTotalExtractCount: 0
+                      executedTimes: 1
+                      subTaskCount: 1
+                      nextExecuteTime: '2018-04-04T20:34:20.973'
+                      endExecuteTime: '2018-04-04T18:34:20.973'
+                      startExecuteTime: '2018-04-04T18:34:20.973'
+                    requestId: 0HMD469L0I8R0:00000001
+        '400':
+          description: Error Example
+          content:
+            application/json:
+              schema:
+                $schema: http://json-schema.org/draft-04/schema#
+                title: Error Example
+                type: object
+                properties:
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      message:
+                        type: string
+                  requestId:
+                    type: string
+              examples:
+                Error Example:
+                  value:
+                    error:
+                      code: ServerError
+                      message: Internal Server Error
+                    requestId: 0HMD469L0I8R0:00000001
