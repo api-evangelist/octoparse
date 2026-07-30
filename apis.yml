@@ -3,42 +3,252 @@ url: |-
 
   https://raw.githubusercontent.com/api-evangelist/octoparse/refs/heads/main/apis.yml
 apis:
-  - aid: octoparse:octoparse
-    name: Octoparse
-    tags:
-      - Action
-      - Actions
-      - Cloud_ Extraction
-      - Copy
-      - Data
-      - Files
-      - Group
-      - Groups
-      - Items
-      - Loop
-      - Move
-      - Properties
-      - Remove
-      - Search
-      - Statuses
-      - Stop
-      - Subtasks
-      - Task
-      - Token
-    baseURL: https://openapi.octoparse.com
-    humanURL: https://www.octoparse.com/
-    properties:
-      - url: https://www.octoparse.com/
-        type: Documentation
-      - url: openapi/octoparse-openapi.yml
-        type: OpenAPI
-    description: Octoparse is your no-coding solution for web scraping to turn pages into structured data within clicks.
+- aid: octoparse:octoparse-action-api
+  name: Octoparse Action API
+  description: The Action API from Octoparse — 1 operation(s) for action.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Action
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-action-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-actions-api
+  name: Octoparse Actions API
+  description: The Actions API from Octoparse — 1 operation(s) for actions.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Actions
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-actions-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-cloud-extraction-api
+  name: Octoparse Cloud_ Extraction API
+  description: The Cloud_ Extraction API from Octoparse — 2 operation(s) for cloud_ extraction.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Cloud_ Extraction
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-cloud-extraction-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-copy-api
+  name: Octoparse Copy API
+  description: The Copy API from Octoparse — 1 operation(s) for copy.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Copy
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-copy-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-data-api
+  name: Octoparse Data API
+  description: The Data API from Octoparse — 5 operation(s) for data.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Data
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-data-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-files-api
+  name: Octoparse Files API
+  description: The Files API from Octoparse — 1 operation(s) for files.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Files
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-files-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-group-api
+  name: Octoparse Group API
+  description: The Group API from Octoparse — 1 operation(s) for group.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Group
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-group-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-groups-api
+  name: Octoparse Groups API
+  description: The Groups API from Octoparse — 1 operation(s) for groups.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-groups-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-items-api
+  name: Octoparse Items API
+  description: The Items API from Octoparse — 1 operation(s) for items.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Items
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-items-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-loop-api
+  name: Octoparse Loop API
+  description: The Loop API from Octoparse — 1 operation(s) for loop.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Loop
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-loop-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-move-api
+  name: Octoparse Move API
+  description: The Move API from Octoparse — 1 operation(s) for move.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Move
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-move-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-properties-api
+  name: Octoparse Properties API
+  description: The Properties API from Octoparse — 1 operation(s) for properties.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Properties
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-properties-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-remove-api
+  name: Octoparse Remove API
+  description: The Remove API from Octoparse — 1 operation(s) for remove.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Remove
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-remove-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-search-api
+  name: Octoparse Search API
+  description: The Search API from Octoparse — 1 operation(s) for search.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-search-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-statuses-api
+  name: Octoparse Statuses API
+  description: The Statuses API from Octoparse — 2 operation(s) for statuses.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Statuses
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-statuses-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-stop-api
+  name: Octoparse Stop API
+  description: The Stop API from Octoparse — 2 operation(s) for stop.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Stop
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-stop-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-subtasks-api
+  name: Octoparse Subtasks API
+  description: The Subtasks API from Octoparse — 2 operation(s) for subtasks.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Subtasks
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-subtasks-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-task-api
+  name: Octoparse Task API
+  description: The Task API from Octoparse — 9 operation(s) for task.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Task
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-task-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
+- aid: octoparse:octoparse-token-api
+  name: Octoparse Token API
+  description: The Token API from Octoparse — 1 operation(s) for token.
+  humanURL: https://www.octoparse.com/
+  baseURL: https://openapi.octoparse.com
+  tags:
+  - Token
+  properties:
+  - type: OpenAPI
+    url: openapi/octoparse-token-api-openapi.yml
+  - type: Documentation
+    url: https://www.octoparse.com/
 name: Octoparse
 tags:
   - Harvesting
   - Scraping
 kind: contract
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/octoparse.png
 access: 3rd-Party
 created: '2024-11-27'
 modified: '2026-05-19'
