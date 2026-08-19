@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Octoparse Action Stop API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Stop",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Octoparse cloudextractionStop",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comcloudextraction/stop",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Stop Task"
+        },
+        {
+          "info": {
+            "name": "Octoparse cloudextractionSubtasksStop",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comcloudextraction/subtasks:stop",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Stop Subtasks"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

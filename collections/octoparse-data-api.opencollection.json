@@ -1,0 +1,153 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Octoparse Action Data API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Data",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Octoparse all",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openapi.octoparse.comdata/all",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query",
+                "description": "Task ID"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Data offset. When offset=0, you can get data from the first data row."
+              },
+              {
+                "name": "size",
+                "value": "",
+                "type": "query",
+                "description": "The amount of data rows(range from 1 to 1000)."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get Data by Offset"
+        },
+        {
+          "info": {
+            "name": "Octoparse lotnoAll",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openapi.octoparse.comdata/lotno/all",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query",
+                "description": "Task Id"
+              },
+              {
+                "name": "lotno",
+                "value": "",
+                "type": "query",
+                "description": "Batch ID"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Data offset. When offset=0, you can get data from the first data row."
+              },
+              {
+                "name": "size",
+                "value": "",
+                "type": "query",
+                "description": "The amount of data rows (range from 1 to 1000)."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get Data From a Designated Batch by Offset"
+        },
+        {
+          "info": {
+            "name": "Octoparse markexported",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comdata/markexported",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Mark Data as Exported"
+        },
+        {
+          "info": {
+            "name": "Octoparse notexported",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openapi.octoparse.comdata/notexported",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query",
+                "description": "Task ID"
+              },
+              {
+                "name": "size",
+                "value": "",
+                "type": "query",
+                "description": "The amount of data rows(range from 1 to 1000)"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get Non-Exported Data"
+        },
+        {
+          "info": {
+            "name": "Octoparse remove",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comdata/remove",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Remove Data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

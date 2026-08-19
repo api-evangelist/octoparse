@@ -1,0 +1,217 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Octoparse Action Task API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Task",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Octoparse SubtasksStatus",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openapi.octoparse.comcloudextraction/task/subtasks",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query",
+                "description": "Task ID"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page number"
+              },
+              {
+                "name": "size",
+                "value": "",
+                "type": "query",
+                "description": "Number of subtasks a page (1 to 20)"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get Subtask Status"
+        },
+        {
+          "info": {
+            "name": "Octoparse Copy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comtask/copy",
+            "params": [
+              {
+                "name": "taskGroupId",
+                "value": "",
+                "type": "query",
+                "description": "Task group ID (If not specified, the task will be duplicated to the current task group)"
+              },
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query",
+                "description": "Task ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Duplicate Task"
+        },
+        {
+          "info": {
+            "name": "Octoparse MoveToGroup",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comtask/moveToGroup",
+            "params": [
+              {
+                "name": "taskGroupId",
+                "value": "",
+                "type": "query",
+                "description": "Task group ID"
+              },
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query",
+                "description": "Task ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Move Task"
+        },
+        {
+          "info": {
+            "name": "Octoparse Search",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openapi.octoparse.comtask/search",
+            "params": [
+              {
+                "name": "taskGroupId",
+                "value": "",
+                "type": "query",
+                "description": "Task group ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Search Task"
+        },
+        {
+          "info": {
+            "name": "Octoparse UpdateUrls",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comtask/urls:file",
+            "params": [
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query",
+                "description": "Task ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Task URLs"
+        },
+        {
+          "info": {
+            "name": "Octoparse taskGroup",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openapi.octoparse.comtaskGroup",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get Task Group Information"
+        },
+        {
+          "info": {
+            "name": "Octoparse getActions",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comtask/getActions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get Action Parameters"
+        },
+        {
+          "info": {
+            "name": "Octoparse updateActionProperties",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comtask/updateActionProperties",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Action Parameters"
+        },
+        {
+          "info": {
+            "name": "Octoparse updateLoopItems",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comtask/updateLoopItems",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Loop Item List"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

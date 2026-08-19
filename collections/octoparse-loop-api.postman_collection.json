@@ -1,0 +1,169 @@
+{
+  "item": [
+    {
+      "id": "5c0ebe6a-0ca7-4ca9-9947-30d5331118c5",
+      "name": "Loop",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c19b7ea1-b3da-4041-8761-aef7632ce4e1",
+          "name": "Octoparse updateLoopItems",
+          "request": {
+            "name": "Octoparse updateLoopItems",
+            "description": {
+              "content": "Update Loop Item List",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "updateLoopItems"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2060e16e-91e4-44a4-81e5-7974409cd15d",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateLoopItems"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"message\": \"success\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9237d03f-7b01-48ec-9a42-bb81a4f90781",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "updateLoopItems"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"actionId\": \"<string>\",\n  \"loopType\": \"<string>\",\n  \"loopItems\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"isAppend\": \"<bool>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"TaskUpdateFail\",\n    \"message\": \"Update fails.\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://openapi.octoparse.com/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fb27d5b6-fe82-4557-b60a-7be0dd2e1efc",
+    "name": "Octoparse Action Loop API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Octoparse is your no-coding solution for web scraping to turn pages into\nstructured data within clicks.",
+      "type": "text/plain"
+    }
+  }
+}

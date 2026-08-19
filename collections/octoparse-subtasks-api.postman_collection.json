@@ -1,0 +1,306 @@
+{
+  "item": [
+    {
+      "id": "1765051f-d7bb-475c-965e-8a00568cf0bb",
+      "name": "Subtasks",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5e9caa17-5c8b-4c91-89c5-4f7dc1af849b",
+          "name": "Octoparse cloudextractionSubtasksStart",
+          "request": {
+            "name": "Octoparse cloudextractionSubtasksStart",
+            "description": {
+              "content": "Start subtasks",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cloudextraction",
+                "subtasks{{start}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "dcbc4d99-bcbd-4b66-87c1-7dfb7243dc8f",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "subtasks{{start}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "47082843-0eee-487a-aff2-4055c4d9e5c4",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "subtasks{{start}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "49f355c5-44f0-4990-ae12-362611e828b8",
+          "name": "Octoparse cloudextractionSubtasksStop",
+          "request": {
+            "name": "Octoparse cloudextractionSubtasksStop",
+            "description": {
+              "content": "Stop Subtasks",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cloudextraction",
+                "subtasks{{stop}}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b55c27b4-bf05-47b0-a5b7-94f3e9d4b495",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "subtasks{{stop}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": null,\n  \"requestId\": \"0HMD469L0I8Q1:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7c0793e9-a60c-4ed9-ac38-cef9a3d491a4",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cloudextraction",
+                    "subtasks{{stop}}"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskId\": \"<string>\",\n  \"subTaskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://openapi.octoparse.com/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "4049e803-4671-491d-8cdd-98336fd36044",
+    "name": "Octoparse Action Subtasks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Octoparse is your no-coding solution for web scraping to turn pages into\nstructured data within clicks.",
+      "type": "text/plain"
+    }
+  }
+}

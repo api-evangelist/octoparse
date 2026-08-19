@@ -1,0 +1,169 @@
+{
+  "item": [
+    {
+      "id": "92979333-6896-49cd-8801-d5fcaea9eb96",
+      "name": "Actions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "99b8b89f-37a0-40e0-94d6-cb91ff6c09e2",
+          "name": "Octoparse getActions",
+          "request": {
+            "name": "Octoparse getActions",
+            "description": {
+              "content": "Get Action Parameters",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "getActions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"actionTypes\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "49e91535-707e-45d0-9e7f-e874a7068253",
+              "name": "Response Example (LoopAction):",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "getActions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"actionTypes\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"taskId\": \"a3b9bdf7-9aaa-22f6-9ccf-b32790f6df8f\",\n      \"actions\": [\n        {\n          \"actionType\": \"LoopAction\",\n          \"loopType\": \"URLList\",\n          \"loopItems\": [\n            \"http://www.octoparse\"\n          ],\n          \"name\": \"Loop URLs\",\n          \"actionId\": \"ce1wg4nytr\"\n        },\n        {\n          \"actionType\": \"LoopAction\",\n          \"loopType\": \"TextList\",\n          \"loopItems\": [\n            \"Octoparse\"\n          ],\n          \"name\": \"Loop Texts\",\n          \"actionId\": \"6l3bq70xaka\"\n        }\n      ]\n    }\n  ],\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b6564278-cb26-452c-ba2d-4724f971230d",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "getActions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"taskIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"actionTypes\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"ServerError\",\n    \"message\": \"Internal Server Error\"\n  },\n  \"requestId\": \"0HMD469L0I8R0:00000001\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://openapi.octoparse.com/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2d0e2fb4-b02f-4772-823b-0c529a3c02fc",
+    "name": "Octoparse Action Actions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Octoparse is your no-coding solution for web scraping to turn pages into\nstructured data within clicks.",
+      "type": "text/plain"
+    }
+  }
+}

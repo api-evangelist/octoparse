@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Octoparse Action Token API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Token",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Octoparse getToken",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comtoken",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Obtain a New Token"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

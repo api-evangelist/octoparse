@@ -1,0 +1,200 @@
+{
+  "item": [
+    {
+      "id": "798008ab-77de-4919-acc5-1d0c625e8d19",
+      "name": "Group",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f6a6fddf-bb36-494c-a393-9946e1e9dc58",
+          "name": "Octoparse MoveToGroup",
+          "request": {
+            "name": "Octoparse MoveToGroup",
+            "description": {
+              "content": "Move Task",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "task",
+                "moveToGroup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "taskGroupId",
+                  "value": "<string>",
+                  "description": "(Required) Task group ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "taskId",
+                  "value": "<string>",
+                  "description": "(Required) Task ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "bcbe6a7b-bfb9-4db3-ac72-58c9a31cb35f",
+              "name": "Response Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "moveToGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"moved\": true\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "af8bb47f-9725-4431-91c5-848be8f410fb",
+              "name": "Error Example",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "task",
+                    "moveToGroup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "taskGroupId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "taskId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": {\n    \"code\": \"InvalidTaskId\",\n    \"message\": \"Invalid task ID\"\n  },\n  \"requestId\": \"0HMCVDHG1V3E6:00000002\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://openapi.octoparse.com/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9ac79a2e-0f3d-4840-93e4-c4d316d423f0",
+    "name": "Octoparse Action Group API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Octoparse is your no-coding solution for web scraping to turn pages into\nstructured data within clicks.",
+      "type": "text/plain"
+    }
+  }
+}

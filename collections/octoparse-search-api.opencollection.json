@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Octoparse Action Search API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Octoparse Search",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://openapi.octoparse.comtask/search",
+            "params": [
+              {
+                "name": "taskGroupId",
+                "value": "",
+                "type": "query",
+                "description": "Task group ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Search Task"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

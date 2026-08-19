@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Octoparse Action Copy API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Copy",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Octoparse Copy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://openapi.octoparse.comtask/copy",
+            "params": [
+              {
+                "name": "taskGroupId",
+                "value": "",
+                "type": "query",
+                "description": "Task group ID (If not specified, the task will be duplicated to the current task group)"
+              },
+              {
+                "name": "taskId",
+                "value": "",
+                "type": "query",
+                "description": "Task ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Duplicate Task"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
