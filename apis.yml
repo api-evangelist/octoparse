@@ -69,6 +69,8 @@ apis:
   humanURL: https://www.octoparse.com/
   baseURL: https://openapi.octoparse.com
   tags:
+  - File
+  tags_raw:
   - Files
   properties:
   - type: OpenAPI
@@ -93,6 +95,8 @@ apis:
   humanURL: https://www.octoparse.com/
   baseURL: https://openapi.octoparse.com
   tags:
+  - Group
+  tags_raw:
   - Groups
   properties:
   - type: OpenAPI
@@ -105,6 +109,8 @@ apis:
   humanURL: https://www.octoparse.com/
   baseURL: https://openapi.octoparse.com
   tags:
+  - Item
+  tags_raw:
   - Items
   properties:
   - type: OpenAPI
@@ -152,7 +158,8 @@ apis:
   description: The Remove API from Octoparse — 1 operation(s) for remove.
   humanURL: https://www.octoparse.com/
   baseURL: https://openapi.octoparse.com
-  tags:
+  tags: []
+  tags_raw:
   - Remove
   properties:
   - type: OpenAPI
@@ -177,6 +184,8 @@ apis:
   humanURL: https://www.octoparse.com/
   baseURL: https://openapi.octoparse.com
   tags:
+  - Status
+  tags_raw:
   - Statuses
   properties:
   - type: OpenAPI
