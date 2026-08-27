@@ -117,55 +117,6 @@ apis:
     url: openapi/octoparse-items-api-openapi.yml
   - type: Documentation
     url: https://www.octoparse.com/
-- aid: octoparse:octoparse-loop-api
-  name: Octoparse Loop API
-  description: The Loop API from Octoparse — 1 operation(s) for loop.
-  humanURL: https://www.octoparse.com/
-  baseURL: https://openapi.octoparse.com
-  tags:
-  - Loop
-  properties:
-  - type: OpenAPI
-    url: openapi/octoparse-loop-api-openapi.yml
-  - type: Documentation
-    url: https://www.octoparse.com/
-- aid: octoparse:octoparse-move-api
-  name: Octoparse Move API
-  description: The Move API from Octoparse — 1 operation(s) for move.
-  humanURL: https://www.octoparse.com/
-  baseURL: https://openapi.octoparse.com
-  tags:
-  - Move
-  properties:
-  - type: OpenAPI
-    url: openapi/octoparse-move-api-openapi.yml
-  - type: Documentation
-    url: https://www.octoparse.com/
-- aid: octoparse:octoparse-properties-api
-  name: Octoparse Properties API
-  description: The Properties API from Octoparse — 1 operation(s) for properties.
-  humanURL: https://www.octoparse.com/
-  baseURL: https://openapi.octoparse.com
-  tags:
-  - Properties
-  properties:
-  - type: OpenAPI
-    url: openapi/octoparse-properties-api-openapi.yml
-  - type: Documentation
-    url: https://www.octoparse.com/
-- aid: octoparse:octoparse-remove-api
-  name: Octoparse Remove API
-  description: The Remove API from Octoparse — 1 operation(s) for remove.
-  humanURL: https://www.octoparse.com/
-  baseURL: https://openapi.octoparse.com
-  tags: []
-  tags_raw:
-  - Remove
-  properties:
-  - type: OpenAPI
-    url: openapi/octoparse-remove-api-openapi.yml
-  - type: Documentation
-    url: https://www.octoparse.com/
 - aid: octoparse:octoparse-search-api
   name: Octoparse Search API
   description: The Search API from Octoparse — 1 operation(s) for search.
@@ -214,18 +165,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/octoparse-subtasks-api-openapi.yml
-  - type: Documentation
-    url: https://www.octoparse.com/
-- aid: octoparse:octoparse-task-api
-  name: Octoparse Task API
-  description: The Task API from Octoparse — 9 operation(s) for task.
-  humanURL: https://www.octoparse.com/
-  baseURL: https://openapi.octoparse.com
-  tags:
-  - Task
-  properties:
-  - type: OpenAPI
-    url: openapi/octoparse-task-api-openapi.yml
   - type: Documentation
     url: https://www.octoparse.com/
 - aid: octoparse:octoparse-token-api
