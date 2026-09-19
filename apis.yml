@@ -173,6 +173,8 @@ apis:
   humanURL: https://www.octoparse.com/
   baseURL: https://openapi.octoparse.com
   tags:
+  - Tokens
+  tags_raw:
   - Token
   properties:
   - type: OpenAPI
