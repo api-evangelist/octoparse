@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Octoparse Action Token API
+  title: Octoparse Token API
   version: 1.0.0
   description: 'Octoparse is your no-coding solution for web scraping to turn pages into
 
@@ -96,3 +96,5 @@ paths:
                       code: Invalid.Grant
                       message: Incorrect username or password.
                     requestId: 0HMD43G9J9JV9:00000001
+      operationId: postToken
+      x-operation-id-source: derived

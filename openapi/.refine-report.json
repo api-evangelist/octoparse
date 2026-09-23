@@ -1,25 +1,7 @@
 {
   "provider": "octoparse",
   "sources": [
-    "octoparse-action-api-openapi.yml",
-    "octoparse-actions-api-openapi.yml",
-    "octoparse-cloud-extraction-api-openapi.yml",
-    "octoparse-copy-api-openapi.yml",
-    "octoparse-data-api-openapi.yml",
-    "octoparse-files-api-openapi.yml",
-    "octoparse-group-api-openapi.yml",
-    "octoparse-groups-api-openapi.yml",
-    "octoparse-items-api-openapi.yml",
-    "octoparse-loop-api-openapi.yml",
-    "octoparse-move-api-openapi.yml",
-    "octoparse-properties-api-openapi.yml",
-    "octoparse-remove-api-openapi.yml",
-    "octoparse-search-api-openapi.yml",
-    "octoparse-statuses-api-openapi.yml",
-    "octoparse-stop-api-openapi.yml",
-    "octoparse-subtasks-api-openapi.yml",
-    "octoparse-task-api-openapi.yml",
-    "octoparse-token-api-openapi.yml"
+    "_original/octoparse-openapi.yml"
   ],
   "outputs": [
     "octoparse-action-api-openapi.yml",
@@ -31,20 +13,35 @@
     "octoparse-group-api-openapi.yml",
     "octoparse-groups-api-openapi.yml",
     "octoparse-items-api-openapi.yml",
-    "octoparse-loop-api-openapi.yml",
-    "octoparse-move-api-openapi.yml",
-    "octoparse-properties-api-openapi.yml",
-    "octoparse-remove-api-openapi.yml",
     "octoparse-search-api-openapi.yml",
     "octoparse-statuses-api-openapi.yml",
     "octoparse-stop-api-openapi.yml",
     "octoparse-subtasks-api-openapi.yml",
-    "octoparse-task-api-openapi.yml",
     "octoparse-token-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "octoparse-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "octoparse-openapi.yml: multi-axis tagging (19 tags, 14 first tags, 1.67x duplication over 21 operations) \u2014 split on first tag, 11 operations narrowed",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "octoparse-action-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-actions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-cloud-extraction-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-copy-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-data-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-files-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-group-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-items-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-statuses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-stop-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-subtasks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "octoparse-token-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

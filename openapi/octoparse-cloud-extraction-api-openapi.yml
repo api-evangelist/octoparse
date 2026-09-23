@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Octoparse Action Cloud_ Extraction API
+  title: Octoparse Cloud_ Extraction API
   version: 1.0.0
   description: 'Octoparse is your no-coding solution for web scraping to turn pages into
 
@@ -92,6 +92,8 @@ paths:
                       code: ServerError
                       message: Internal Server Error
                     requestId: 0HMD469L0I8R0:00000001
+      operationId: getCloudextractionTaskSubtasks
+      x-operation-id-source: derived
   cloudextraction/start:
     post:
       tags:
@@ -156,3 +158,5 @@ paths:
                       code: ServerError
                       message: Internal Server Error
                     requestId: 0HMD469L0I8R0:00000001
+      operationId: postCloudextractionStart
+      x-operation-id-source: derived

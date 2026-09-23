@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Octoparse Action API
   version: 1.0.0
@@ -109,3 +109,5 @@ paths:
                       code: InvalidParameter.Required
                       message: taskId cannot be empty.
                     requestId: 0HMCVDHG1V3E6:00000002
+      operationId: postTaskUpdateActionProperties
+      x-operation-id-source: derived
