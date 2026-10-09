@@ -1,0 +1,30 @@
+# Front Door AI Index — octoparse — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: octoparse
+  lexicon_version: '1.0'
+  probed_at: '2026-09-25'
+  host: www.octoparse.com
+  final_host: www.octoparse.com
+  ownership: own
+  owner: octoparse
+  shares_host_with: null
+  inherited_from: null
+  alias_of: null
+  verdict: scored
+  score: 6
+  band: 4
+  band_label: moderate
+  host_score: 6
+  density: 2.74
+  words: 2191
+  tiers:
+    agentic: 0
+    core: 6
+    model: 0
+  ambiguous: 2
+  top_terms:
+    AI: 6
+    automation: 1
+    intelligence: 1
