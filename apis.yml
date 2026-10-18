@@ -184,6 +184,9 @@ apis:
 name: Octoparse
 tags:
   - Harvesting
+  - Web Scraping
+tags_raw:
+  - Harvesting
   - Scraping
 kind: contract
 deliveryModel:
