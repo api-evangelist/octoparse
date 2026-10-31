@@ -1,4 +1,4 @@
-# Octoparse (octoparse)
+# Octoparse
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,83 +66,149 @@
 
 Octoparse is a powerful web scraping tool that allows users to extract data from websites without any coding knowledge. The platform uses advanced algorithms to automatically identify and extract relevant information from web pages, saving users time and effort. With Octoparse, users can easily collect and organize data from multiple sources, such as e-commerce sites, social media platforms, and news websites, for analysis and reporting.
 
-**APIs.json:** [
-https://raw.githubusercontent.com/api-evangelist/octoparse/refs/heads/main/apis.yml](
-https://raw.githubusercontent.com/api-evangelist/octoparse/refs/heads/main/apis.yml)
+**Areas:** Harvesting · Web Scraping
 
-## Scope
+## Octoparse on APIs.io
 
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Octoparse is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/octoparse/](https://apis.io/providers/octoparse/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (14)
 
-- Harvesting
-- Scraping
+- [Octoparse Action API](https://apis.io/apis/octoparse/octoparse-action-api/) — The Action API from Octoparse — 1 operation(s) for action.
+- [Octoparse Actions API](https://apis.io/apis/octoparse/octoparse-actions-api/) — The Actions API from Octoparse — 1 operation(s) for actions.
+- [Octoparse Cloud_ Extraction API](https://apis.io/apis/octoparse/octoparse-cloud-extraction-api/) — The Cloud_ Extraction API from Octoparse — 2 operation(s) for cloud_ extraction.
+- [Octoparse Copy API](https://apis.io/apis/octoparse/octoparse-copy-api/) — The Copy API from Octoparse — 1 operation(s) for copy.
+- [Octoparse Data API](https://apis.io/apis/octoparse/octoparse-data-api/) — The Data API from Octoparse — 5 operation(s) for data.
+- [Octoparse Files API](https://apis.io/apis/octoparse/octoparse-files-api/) — The Files API from Octoparse — 1 operation(s) for files.
+- [Octoparse Group API](https://apis.io/apis/octoparse/octoparse-group-api/) — The Group API from Octoparse — 1 operation(s) for group.
+- [Octoparse Groups API](https://apis.io/apis/octoparse/octoparse-groups-api/) — The Groups API from Octoparse — 1 operation(s) for groups.
+- [Octoparse Items API](https://apis.io/apis/octoparse/octoparse-items-api/) — The Items API from Octoparse — 1 operation(s) for items.
+- [Octoparse Search API](https://apis.io/apis/octoparse/octoparse-search-api/) — The Search API from Octoparse — 1 operation(s) for search.
+- [Octoparse Statuses API](https://apis.io/apis/octoparse/octoparse-statuses-api/) — The Statuses API from Octoparse — 2 operation(s) for statuses.
+- [Octoparse Stop API](https://apis.io/apis/octoparse/octoparse-stop-api/) — The Stop API from Octoparse — 2 operation(s) for stop.
+- [Octoparse Subtasks API](https://apis.io/apis/octoparse/octoparse-subtasks-api/) — The Subtasks API from Octoparse — 2 operation(s) for subtasks.
+- [Octoparse Token API](https://apis.io/apis/octoparse/octoparse-token-api/) — The Token API from Octoparse — 1 operation(s) for token.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-11-27
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Octoparse
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Octoparse is your no-coding solution for web scraping to turn pages into structured data within clicks.
+- [Octoparse Agentic Access](https://apis.io/agentic-access/octoparse/octoparse-agentic-access/)
 
-- **Human URL:** [https://www.octoparse.com/](https://www.octoparse.com/)
-- **Base URL:** `https://openapi.octoparse.com`
+#### Collections (20)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Action
-- Actions
-- Cloud_ Extraction
-- Copy
-- Data
-- Files
-- Group
-- Groups
-- Items
-- Loop
-- Move
-- Properties
-- Remove
-- Search
-- Statuses
-- Stop
-- Subtasks
-- Task
-- Token
+- [Octoparse](https://apis.io/collections/octoparse/open-octoparse/)
+- [Octoparse Action API](https://apis.io/collections/octoparse/open-octoparse-action-api/)
+- [Octoparse Action Actions API](https://apis.io/collections/octoparse/open-octoparse-actions-api/)
+- [Octoparse Action Cloud_ Extraction API](https://apis.io/collections/octoparse/open-octoparse-cloud-extraction-api/)
+- [Octoparse Action Copy API](https://apis.io/collections/octoparse/open-octoparse-copy-api/)
+- [Octoparse Action Data API](https://apis.io/collections/octoparse/open-octoparse-data-api/)
+- [Octoparse Action Files API](https://apis.io/collections/octoparse/open-octoparse-files-api/)
+- [Octoparse Action Group API](https://apis.io/collections/octoparse/open-octoparse-group-api/)
+- [Octoparse Action Groups API](https://apis.io/collections/octoparse/open-octoparse-groups-api/)
+- [Octoparse Action Items API](https://apis.io/collections/octoparse/open-octoparse-items-api/)
+- [Octoparse Action Loop API](https://apis.io/collections/octoparse/open-octoparse-loop-api/)
+- [Octoparse Action Move API](https://apis.io/collections/octoparse/open-octoparse-move-api/)
+- [Octoparse Action Properties API](https://apis.io/collections/octoparse/open-octoparse-properties-api/)
+- [Octoparse Action Remove API](https://apis.io/collections/octoparse/open-octoparse-remove-api/)
+- [Octoparse Action Search API](https://apis.io/collections/octoparse/open-octoparse-search-api/)
+- [Octoparse Action Statuses API](https://apis.io/collections/octoparse/open-octoparse-statuses-api/)
+- [Octoparse Action Stop API](https://apis.io/collections/octoparse/open-octoparse-stop-api/)
+- [Octoparse Action Subtasks API](https://apis.io/collections/octoparse/open-octoparse-subtasks-api/)
+- [Octoparse Action Task API](https://apis.io/collections/octoparse/open-octoparse-task-api/)
+- [Octoparse Action Token API](https://apis.io/collections/octoparse/open-octoparse-token-api/)
 
-#### Properties
+#### Security (1)
 
-- [Documentation](https://www.octoparse.com/)
-- [OpenAPI](openapi/octoparse-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/octoparse.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/octoparse.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Octoparse Domain Security](https://apis.io/security/octoparse/octoparse-domain-security/)
 
-- [GitHub Organization](https://github.com/octoparse)
-- [LinkedIn](https://www.linkedin.com/company/octoparse)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Octoparse Plans Pricing](https://apis.io/plans/octoparse/octoparse-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Octoparse Rate Limits](https://apis.io/rate-limits/octoparse/octoparse-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Octoparse Finops](https://apis.io/finops/octoparse/octoparse-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.octoparse.com/)
 - [Pricing](https://www.octoparse.com/pricing)
-- [Blog](https://www.octoparse.com/blog)
 - [Support](https://helpcenter.octoparse.com/en)
-- [Authentication](https://openapi.octoparse.com/en-US/#api-Access_Token)
-- [Code](https://openapi.octoparse.com/en-US/#api-Sample_Code)
-- [Login](https://identity.octoparse.com/Interlogin?lang=en-US&returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DOctoparse%26scope%3Dopenid%2520profile%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fwww.octoparse.com%252Flogin-callback%26nonce%3DKaF5JwpvyIJo6ZXghIrdVhJpATdf0zAYzTssKQReSvM%26state%3DmgG6bioTBesHvAP1awOmfKZlg-nMhU_1e4ZCKziFR58%26nextUrl%3Dhttps%253A%252F%252Fwww.octoparse.com%252F%26language%3Den-US)
-- [Sign Up](https://identity.octoparse.com/IntersignUp)
-- [F A Q](https://helpcenter.octoparse.com/en/collections/3590192-faq)
-- [White Papers](https://service.octoparse.com/whitepapers)
-- [Affiliate](https://www.octoparse.com/affiliates)
-- [Terms of Service](https://www.octoparse.com/terms-and-conditions)
-- [Privacy Policy](https://www.octoparse.com/privacy-policy)
-- [Customers](https://www.octoparse.com/customer-stories)
+- [Blog](https://www.octoparse.com/blog)
+- [Terms of service](https://www.octoparse.com/terms-and-conditions)
+- [Privacy policy](https://www.octoparse.com/privacy-policy)
+- [GitHub](https://github.com/octoparse)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 35.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 47.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 52.6 |
+
+**Agent readiness 22.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/octoparse/](https://apis.io/providers/octoparse/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Octoparse: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/octoparse/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
